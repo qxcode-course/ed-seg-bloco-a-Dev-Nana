@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_19-23-40",
+            "content": "@@ -23,249 +23,21 @@\n mt%22%0A\n-%0Atype Jogada struct%7B%0A    pa, pb, int%0A%7D%0A%0Afunc main() %7B%0A    lista := make(%5B%5DJogada, 0)%0A    qtd := 0%0A    fmt.Scan(&qtd)%0A    for range(qtd)%7B%0A        var a, b %0A        fmt.Scan(&a, &b)%0A        jogadas = append(jogadas, Jogada%7Bpa: a, pb: b%7D)%0A    %7D\n+func main() %7B\n %0A   \n@@ -53,15 +53,16 @@\n tln(\n-jogadas\n+%22qxcode%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-16_19-30-58",
+            "content": "@@ -240,18 +240,26 @@\n  Jogada%7B\n-a,\n+pa: a, pb:\n  b%7D)%0A   \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-16_19-31-30",
+            "content": "@@ -50,16 +50,17 @@\n   pa, pb\n+,\n  int%0A%7D%0A%0A\n@@ -76,19 +76,16 @@\n () %7B%0A   \n- //\n  lista :\n@@ -97,27 +97,25 @@\n e(%5B%5DJogada, \n-qtd\n+0\n )%0A    qtd :=\n@@ -144,70 +144,22 @@\n     \n-jogadas :- make(%5B%5DJogada, qtd)%0A    fot _, job := range jogadas\n+for range(qtd)\n %7B%0A  \n@@ -163,19 +163,16 @@\n %0A       \n- //\n  var a, \n@@ -181,19 +181,16 @@\n %0A       \n- //\n  fmt.Sca\n@@ -210,11 +210,8 @@\n     \n- //\n  jog\n@@ -251,43 +251,8 @@\n b%7D)%0A\n-        fmt.Scan(&jog.pa, &jog.pb)%0A\n     \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-16_19-35-31",
+            "content": "@@ -153,17 +153,17 @@\n ogadas :\n-=\n+-\n  make(%5B%5D\n@@ -185,16 +185,16 @@\n   fo\n-r\n+t\n  _, jo\n-g\n+b\n  := \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-16_19-36-57",
+            "content": "package main\nimport \"fmt\"\n\ntype Jogada struct{\n    pa, pb int\n}\n\nfunc main() {\n    // lista := make([]Jogada, qtd)\n    qtd := 0\n    fmt.Scan(&qtd)\n    jogadas := make([]Jogada, qtd)\n    for _, jog := range jogadas{\n        // var a, b \n        // fmt.Scan(&a, &b)\n        // jogadas = append(jogadas, Jogada{a, b})\n        fmt.Scan(&jog.pa, &jog.pb)\n    }\n    fmt.Println(jogadas)\n}\n",
+            "lines": "20"
+        }
+    ]
+}

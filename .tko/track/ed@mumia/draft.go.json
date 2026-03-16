@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_19-19-47",
+            "content": "@@ -25,16 +25,27 @@\n   %22fmt%22%0A\n+    %22math%22%0A\n )%0Afunc m\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-16_19-19-58",
+            "content": "@@ -90,48 +90,21 @@\n     \n-fmt.Scan\n+print\n ln(\n-&\n nome)\n-%0A    fmt.Scanln(&idade)\n %0A%0A  \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-16_19-21-09",
+            "content": "@@ -132,38 +132,8 @@\n e)%0A%0A\n-    fmt.Print(nome + %22 eh %22)%0A%0A\n     \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-16_19-22-56",
+            "content": "package main\nimport (\n    \"fmt\"\n)\nfunc main() {\n    var nome string\n    var idade int32\n\n    fmt.Scanln(&nome)\n    fmt.Scanln(&idade)\n\n    fmt.Print(nome + \" eh \")\n\n    if idade < 12 {\n        fmt.Println(\"crianca\")\n    } else if idade < 18 {\n        fmt.Println(\"jovem\")\n    } else if idade < 65 {\n        fmt.Println(\"adulto\")\n    } else if idade < 1000 {\n        fmt.Println(\"idoso\")\n    } else {\n        fmt.Println(\"mumia\")\n    }\n\n}\n",
+            "lines": "26"
+        }
+    ]
+}
