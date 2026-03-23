@@ -22,8 +22,33 @@
         },
         {
             "label": "2026-03-16_19-36-57",
-            "content": "package main\nimport \"fmt\"\n\ntype Jogada struct{\n    pa, pb int\n}\n\nfunc main() {\n    // lista := make([]Jogada, qtd)\n    qtd := 0\n    fmt.Scan(&qtd)\n    jogadas := make([]Jogada, qtd)\n    for _, jog := range jogadas{\n        // var a, b \n        // fmt.Scan(&a, &b)\n        // jogadas = append(jogadas, Jogada{a, b})\n        fmt.Scan(&jog.pa, &jog.pb)\n    }\n    fmt.Println(jogadas)\n}\n",
+            "content": "@@ -10,82 +10,135 @@\n ain%0A\n-%0A\n import \n-(%0A    %22fmt%22%0A    %22math%22%0A)%0A%0Afunc main() %7B%0A%09var rodadas int%0A%09\n+%22fmt%22%0A%0Atype Jogada struct%7B%0A    pa, pb int%0A%7D%0A%0Afunc main() %7B%0A    // lista := make(%5B%5DJogada, qtd)%0A    qtd := 0%0A    \n fmt.Scan\n ln(&\n@@ -137,121 +137,111 @@\n Scan\n-ln\n (&\n-rodadas)%0A    var num int%0A%09vencedor := 99999.0%0A%09for i := 0; i %3C rodadas; i++ %7B%0A%09%09a := 0%0A        b := 0\n+qtd)%0A    jogadas := make(%5B%5DJogada, qtd)%0A    for _, jog := range jogadas%7B%0A        // var a, b \n %0A       \n  fmt\n@@ -232,24 +232,27 @@\n , b %0A       \n+ //\n  fmt.Scan(&a\n@@ -269,233 +269,92 @@\n     \n-if a %3C 10 %7C%7C b %3C 10 %7B%0A            continue%0A        %7D%0A%0A        if math.Abs(float64(a - b)) %3C vencedor %7B%0A            num = i%0A        %7D%0A%09%7D%0A    if num == 0 %7B%0A        fmt.Println(%22nao%22)%0A    %7D else %7B%0A        fmt.Println(num\n+// jogadas = append(jogadas, Jogada%7Ba, b%7D)%0A        fmt.Scan(&jog.pa, &jog.pb\n )%0A    %7D%0A\n %09fmt\n@@ -353,9 +353,12 @@\n   %7D%0A\n-%09\n+    \n fmt.\n",
             "lines": "20"
+        },
+        {
+            "label": "2026-03-23_13-33-03",
+            "content": "@@ -444,10 +444,32 @@\n )%0A    %7D%0A\n+%09fmt.Println(jogadas)%0A\n %7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-23_13-33-16",
+            "content": "@@ -126,23 +126,15 @@\n  := \n-math.MaxFloat64\n+99999.0\n %0A%09fo\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-23_13-39-15",
+            "content": "@@ -93,16 +93,32 @@\n odadas)%0A\n+    var num int%0A\n %09vencedo\n@@ -142,21 +142,8 @@\n t64%0A\n-    num := 0%0A\n %09for\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-23_13-43-31",
+            "content": "@@ -403,20 +403,11 @@\n ln(%22\n-sem ganhador\n+nao\n %22)%0A \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-23_13-43-43",
+            "content": "package main\n\nimport (\n    \"fmt\"\n    \"math\"\n)\n\nfunc main() {\n\tvar rodadas int\n\tfmt.Scanln(&rodadas)\n\tvencedor := math.MaxFloat64\n    num := 0\n\tfor i := 0; i < rodadas; i++ {\n\t\ta := 0\n        b := 0\n        fmt.Scan(&a, &b)\n        if a < 10 || b < 10 {\n            continue\n        }\n\n        if math.Abs(float64(a - b)) < vencedor {\n            num = i\n        }\n\t}\n    if num == 0 {\n        fmt.Println(\"sem ganhador\")\n    } else {\n        fmt.Println(num)\n    }\n}\n",
+            "lines": "30"
         }
     ]
 }

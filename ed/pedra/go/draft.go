@@ -1,20 +1,30 @@
 package main
-import "fmt"
 
-type Jogada struct{
-    pa, pb int
-}
+import (
+    "fmt"
+    "math"
+)
 
 func main() {
-    // lista := make([]Jogada, qtd)
-    qtd := 0
-    fmt.Scan(&qtd)
-    jogadas := make([]Jogada, qtd)
-    for _, jog := range jogadas{
-        // var a, b 
-        // fmt.Scan(&a, &b)
-        // jogadas = append(jogadas, Jogada{a, b})
-        fmt.Scan(&jog.pa, &jog.pb)
+	var rodadas int
+	fmt.Scanln(&rodadas)
+	vencedor := math.MaxFloat64
+    num := 0
+	for i := 0; i < rodadas; i++ {
+		a := 0
+        b := 0
+        fmt.Scan(&a, &b)
+        if a < 10 || b < 10 {
+            continue
+        }
+
+        if math.Abs(float64(a - b)) < vencedor {
+            num = i
+        }
+	}
+    if num == 0 {
+        fmt.Println("sem ganhador")
+    } else {
+        fmt.Println(num)
     }
-    fmt.Println(jogadas)
 }
