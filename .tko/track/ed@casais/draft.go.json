@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-23_13-58-23",
+            "content": "@@ -62,11 +62,6 @@\n e%22)%0A\n-    %0A\n %7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-03-23_14-17-12",
+            "content": "@@ -40,259 +40,33 @@\n  %7B%0A%09\n-var qtd int %0A%09count := 0%0A%09fmt.Scanln(&qtd)%0A    animais := make(%5B%5Dint, qtd)%0A%09for index, _ := range animais %7B%0A%09%09fmt.Scan(&animais%5Bindex%5D)%0A%09%7D%0A%0A%09for ind, _:= range animais %7B%0A%09%09if ind == 0 %7B%0A%09%09%09if animais%5Bind%5D %3C 0 && animais %5Bind + 1%5D %3E 0 %7B%0A%09%09%09%09%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n+fmt.Println(%22qxcode%22)%0A    \n %0A%7D%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-03-23_14-56-16",
+            "content": "@@ -47,16 +47,17 @@\n  qtd int\n+ \n %0A%09count \n@@ -61,17 +61,16 @@\n nt := 0%0A\n-%0A\n %09fmt.Sca\n@@ -79,17 +79,20 @@\n n(&qtd)%0A\n-%09\n+    \n animais \n@@ -115,34 +115,38 @@\n td)%0A\n-%0A\n %09for i\n- := 0; i %3C qtd; i++\n+ndex, _ := range animais\n  %7B%0A%09\n@@ -165,16 +165,20 @@\n nimais%5Bi\n+ndex\n %5D)%0A%09%7D%0A%0A%09\n@@ -186,79 +186,51 @@\n or i\n- := 0; i %3C len(animais)-1; i++ %7B%0A%09%09if animais%5Bi%5D*animais%5Bi+1%5D %3C\n+nd, _:= range animais %7B%0A%09%09if ind ==\n  0 %7B%0A%09%09%09\n anim\n@@ -221,24 +221,27 @@\n d == 0 %7B%0A%09%09%09\n+if \n animais%5Bi%5D =\n@@ -241,70 +241,58 @@\n is%5Bi\n+nd\n %5D \n-= 0%0A%09%09%09\n+%3C 0 && \n animais\n+ \n %5Bi\n-+1%5D =\n+nd + 1%5D %3E\n  0\n+ %7B\n %0A%09%09%09\n-count++%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(count)\n+%09%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n %0A%7D\n+%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-23_15-00-15",
+            "content": "@@ -223,11 +223,9 @@\n s%5Bi%5D\n- * \n+*\n anim\n@@ -225,25 +225,24 @@\n i%5D*animais%5Bi\n- \n +1%5D %3C 0 %7B%0A%09%09\n@@ -269,17 +269,16 @@\n nimais%5Bi\n- \n +1%5D = 0%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-23_15-04-54",
+            "content": "@@ -209,17 +209,16 @@\n  %7B%0A%09%09if \n-(\n animais%5B\n@@ -224,14 +224,9 @@\n %5Bi%5D \n-%3C 0 &&\n+*\n  ani\n@@ -235,63 +235,19 @@\n is%5Bi\n-+1%5D %3E 0) %7C%7C%0A%09%09%09(animais%5Bi%5D %3E 0 && animais%5Bi\n+ \n +1%5D %3C 0\n-)\n  %7B%0A\n-%0A\n %09%09%09a\n@@ -272,16 +272,17 @@\n nimais%5Bi\n+ \n +1%5D = 0%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-23_15-05-36",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar qtd int\n\tcount := 0\n\n\tfmt.Scanln(&qtd)\n\tanimais := make([]int, qtd)\n\n\tfor i := 0; i < qtd; i++ {\n\t\tfmt.Scan(&animais[i])\n\t}\n\n\tfor i := 0; i < len(animais)-1; i++ {\n\t\tif (animais[i] < 0 && animais[i+1] > 0) ||\n\t\t\t(animais[i] > 0 && animais[i+1] < 0) {\n\n\t\t\tanimais[i] = 0\n\t\t\tanimais[i+1] = 0\n\t\t\tcount++\n\t\t}\n\t}\n\n\tfmt.Println(count)\n}",
+            "lines": "27"
+        }
+    ]
+}
