@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-23_13-50-50",
+            "content": "@@ -53,9 +53,16 @@\n tln(\n-5\n+%22qxcode%22\n )%0A%7D%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-03-23_15-08-22",
+            "content": "@@ -53,9 +53,9 @@\n tln(\n-S\n+5\n )%0A%7D%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-03-23_15-08-36",
+            "content": "@@ -53,11 +53,9 @@\n tln(\n-%22S%22\n+S\n )%0A%7D%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-03-23_15-09-05",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,266 +37,28 @@\n ) %7B%0A\n-%09var h, p, f, d int32%0A%09fmt.Scan(&h, &p, &f, &d)%0A%09for %7B%0A%09%09if f %3E 15 %7B%0A%09%09%09f = f %25 16%0A%09%09%7D else if f %3C 0 %7B%0A%09%09%09f = 15%0A%09%09%7D%0A%09%09if f == p %7B%0A%09%09%09fmt.Println(%22N%22)%0A%09%09%09break%0A%09%09%7D%0A%09%09if f == h %7B%0A%09%09%09fmt.Println(%22S%22)%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09if d == -1 %7B%0A%09%09%09f--%0A%09%09%7D else %7B%0A%09%09%09f++%0A%09%09%7D%0A%0A%09%7D%0A%0A%7D\n+    fmt.Println(%22S%22)%0A%7D%0A%0A\n",
+            "lines": "6"
+        },
+        {
+            "label": "2026-03-24_19-45-28",
+            "content": "@@ -87,36 +87,76 @@\n &d)%0A\n-%0A\n %09for %7B%0A\n+%09%09if f %3E 15 %7B%0A%09\n %09%09f = \n-(\n f \n-+ 16) %25 16%0A\n+%25 16%0A%09%09%7D else if f %3C 0 %7B%0A%09%09%09f = 15%0A%09%09%7D\n %0A%09%09i\n@@ -195,25 +195,24 @@\n %09%09break%0A%09%09%7D%0A\n-%0A\n %09%09if f == h \n@@ -291,12 +291,14 @@\n f++%0A%09%09%7D%0A\n+%0A\n %09%7D%0A\n+%0A\n %7D\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-24_19-46-05",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar h, p, f, d int32\n\tfmt.Scan(&h, &p, &f, &d)\n\n\tfor {\n\t\tf = (f + 16) % 16\n\n\t\tif f == p {\n\t\t\tfmt.Println(\"N\")\n\t\t\tbreak\n\t\t}\n\n\t\tif f == h {\n\t\t\tfmt.Println(\"S\")\n\t\t\tbreak\n\t\t}\n\n\t\tif d == -1 {\n\t\t\tf--\n\t\t} else {\n\t\t\tf++\n\t\t}\n\t}\n}",
+            "lines": "28"
+        }
+    ]
+}

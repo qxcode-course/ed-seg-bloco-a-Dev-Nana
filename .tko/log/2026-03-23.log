@@ -10,3 +10,40 @@
 2026-03-23 13:43:55, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100
 2026-03-23 13:44:11, MOVE, v:1, k:ed@pedra, mode:BACK
 2026-03-23 13:45:40, SELF, v:1, k:ed@pedra, self:1, rate:100, study:80, guided:1, concept:1
+2026-03-23 13:49:55, MOVE, v:1, k:ed@fuga, mode:DOWN
+2026-03-23 13:49:58, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-23 13:50:50, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0, size:6
+2026-03-23 13:57:36, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0
+2026-03-23 13:57:42, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-23 13:57:48, MOVE, v:1, k:ed@casais, mode:DOWN
+2026-03-23 13:58:22, MOVE, v:1, k:ed@casais, mode:PICK
+2026-03-23 13:58:23, EXEC, v:1, k:ed@casais, mode:FULL, rate:0, size:7
+2026-03-23 13:58:28, EXEC, v:1, k:ed@casais, mode:FULL, rate:0
+2026-03-23 14:17:12, EXEC, v:1, k:ed@casais, mode:FULL, rate:0, size:8
+2026-03-23 14:17:25, MOVE, v:1, k:ed@casais, mode:BACK
+2026-03-23 14:17:31, MOVE, v:1, k:ed@casais, mode:PICK
+2026-03-23 14:17:33, EXEC, v:1, k:ed@casais, mode:FULL, rate:0
+2026-03-23 14:50:29, MOVE, v:1, k:ed@casais, mode:PICK
+2026-03-23 14:56:16, EXEC, v:1, k:ed@casais, mode:FULL, size:21, fail:COMP
+2026-03-23 14:56:21, MOVE, v:1, k:ed@casais, mode:BACK
+2026-03-23 14:56:34, MOVE, v:1, k:ed@casais, mode:PICK
+2026-03-23 14:56:37, EXEC, v:1, k:ed@casais, mode:FULL, fail:COMP
+2026-03-23 15:00:15, EXEC, v:1, k:ed@casais, mode:FULL, rate:100, size:25
+2026-03-23 15:04:14, MOVE, v:1, k:ed@casais, mode:BACK
+2026-03-23 15:04:47, MOVE, v:1, k:ed@casais, mode:PICK
+2026-03-23 15:04:54, EXEC, v:1, k:ed@casais, mode:FULL, rate:100, size:25
+2026-03-23 15:05:36, EXEC, v:1, k:ed@casais, mode:FULL, rate:100, size:27
+2026-03-23 15:05:52, MOVE, v:1, k:ed@casais, mode:BACK
+2026-03-23 15:07:15, SELF, v:1, k:ed@casais, self:1, rate:100, study:120, concept:1, debug:1
+2026-03-23 15:07:48, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-23 15:07:52, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0
+2026-03-23 15:08:22, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0, size:6
+2026-03-23 15:08:36, EXEC, v:1, k:ed@fuga, mode:FULL, size:6, fail:COMP
+2026-03-23 15:09:05, EXEC, v:1, k:ed@fuga, mode:FULL, rate:80, size:6
+2026-03-23 15:12:21, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-23 15:12:31, MOVE, v:1, k:ed@casais, mode:PICK
+2026-03-23 15:12:34, MOVE, v:1, k:ed@casais, mode:BACK
+2026-03-23 15:12:52, SELF, v:1, k:ed@casais, self:1, rate:100, study:120, concept:1
+2026-03-23 15:14:53, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-23 15:14:54, EXEC, v:1, k:ed@fuga, mode:FULL, rate:80
+2026-03-23 15:15:20, MOVE, v:1, k:ed@fuga, mode:BACK
