@@ -1,0 +1,25 @@
+2026-03-30 18:46:39, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-03-30 18:46:43, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100
+2026-03-30 18:46:52, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-03-30 18:47:27, SELF, v:1, k:ed@pedra, self:1, rate:100, study:80, concept:1
+2026-03-30 18:47:41, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-30 18:47:43, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100
+2026-03-30 18:47:49, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-30 18:48:44, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-30 18:48:45, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0
+2026-03-30 19:11:23, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0
+2026-03-30 19:11:25, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-30 19:11:27, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-30 19:11:29, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0
+2026-03-30 19:21:47, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0
+2026-03-30 19:21:57, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-30 19:22:25, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-30 19:22:28, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100
+2026-03-30 19:40:39, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100
+2026-03-30 19:40:41, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-30 19:40:48, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-30 19:41:05, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100
+2026-03-30 19:41:06, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-30 19:41:52, SELF, v:1, k:ed@fuga, self:1, rate:100, study:120, concept:1, refactor:1
+2026-03-30 19:42:04, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-30 19:45:05, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0

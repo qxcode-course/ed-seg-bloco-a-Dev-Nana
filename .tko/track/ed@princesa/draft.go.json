@@ -1,0 +1,94 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-06_18-40-50",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,424 +37,32 @@\n ) %7B%0A\n-%09var n, e int%0A%09fmt.Scan(&n, &e)%0A%0A%09a := make(%5B%5Dint, n)%0A%09for i := range a %7B%0A%09%09a%5Bi%5D = i + 1%0A%09%7D%0A%0A%09p := e - 1%0A%0A%09for len(a) %3E 0 %7B%0A%09%09print(a, p)%0A%0A%09%09if len(a) == 1 %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09m := (p + 1) %25 len(a)%0A%09%09a = append(a%5B:m%5D, a%5Bm+1:%5D...)%0A%09%09p = m %25 len(a)%0A%09%7D%0A%7D%0A%0Afunc print(a %5B%5Dint, p int) %7B%0A%09fmt.Print(%22%5B %22)%0A%09for i, v := range a %7B%0A%09%09if i == p %7B%0A%09%09%09fmt.Printf(%22%25d%3E %22, v)%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22%25d %22, v)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(%22%5D%22)%0A%7D\n+    fmt.Println(%22qxcode%22)%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-06_18-51-57",
+            "content": "@@ -103,21 +103,15 @@\n  := \n-0; i %3C n; i++\n+range a\n  %7B%0A%09\n@@ -159,167 +159,58 @@\n ) %3E \n-1\n+0\n  %7B%0A%09%09\n-fmt.P\n+p\n rint(\n-%22%5B %22\n+a, p\n )%0A\n+%0A\n %09%09\n-for i := 0; i %3C len(a); i++ %7B%0A%09%09%09if i\n+if len(a)\n  == \n-p\n+1\n  %7B%0A%09%09%09\n-%09fmt.Print(a%5Bi%5D, %22%3E %22)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Print(a%5Bi%5D, %22 %22)%0A%09%09%09%7D%0A%09%09%7D%0A%09%09fmt.Println(%22%5D%22)\n+break%0A%09%09%7D\n %0A%0A%09%09\n@@ -218,42 +218,23 @@\n  := \n+(\n p + 1\n- // sem %25 (pode quebrar mesmo\n+) %25 len(a\n )%0A%09%09\n@@ -275,64 +275,188 @@\n = m \n-// sem ajustar direito%0A%09%7D%0A%0A%09fmt.Println(%22%5B%22, a%5B0%5D, %22%3E \n+%25 len(a)%0A%09%7D%0A%7D%0A%0Afunc print(a %5B%5Dint, p int) %7B%0A%09fmt.Print(%22%5B %22)%0A%09for i, v := range a %7B%0A%09%09if i == p %7B%0A%09%09%09fmt.Printf(%22%25d%3E %22, v)%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22%25d %22, v)%0A%09%09%7D%0A%09%7D%0A%09fmt.Println(%22\n %5D%22)%0A%7D\n-%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-06_18-53-51",
+            "content": "@@ -338,41 +338,38 @@\n  + 1\n-%0A%09%09if m %3E= len(a) %7B%0A%09%09%09m = 0%0A%09%09%7D%0A\n+ // sem %25 (pode quebrar mesmo)\n %0A%09%09a\n@@ -401,52 +401,38 @@\n ..)%0A\n-%0A\n %09%09p = \n-p + 1%0A%09%09if p %3E= len(a) %7B%0A%09%09%09p = 0%0A%09%09%7D\n+m // sem ajustar direito\n %0A%09%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-06_18-55-23",
+            "content": "@@ -475,14 +475,15 @@\n a%5B0%5D, %22%3E\n+ \n %5D%22)%0A%7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-06_18-56-58",
+            "content": "@@ -403,16 +403,25 @@\n ...)%0A%0A%09%09\n+p = p + 1\n %0A%09%09if p \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-06_18-58-30",
+            "content": "@@ -407,18 +407,8 @@\n %0A%0A%09%09\n-p += e - 1\n %0A%09%09i\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-06_18-58-51",
+            "content": "@@ -412,9 +412,13 @@\n  += \n-2\n+e - 1\n %0A%09%09i\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-06_18-58-59",
+            "content": "@@ -405,23 +405,20 @@\n .)%0A%0A%09%09p \n++\n = \n-p + 1\n+2\n %0A%09%09if p \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-06_18-59-13",
+            "content": "@@ -411,17 +411,17 @@\n p = p + \n-m\n+1\n %0A%09%09if p \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-06_18-59-32",
+            "content": "@@ -406,16 +406,20 @@\n )%0A%0A%09%09p =\n+ p +\n  m%0A%09%09if \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-06_18-59-46",
+            "content": "@@ -475,10 +475,10 @@\n , %22%3E\n- \n %5D%22)%0A%7D\n+%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-06_19-00-35",
+            "content": "@@ -333,24 +333,45 @@\n  := \n-(\n p + 1\n-) %25 len(a)\n+%0A%09%09if m %3E= len(a) %7B%0A%09%09%09m = 0%0A%09%09%7D\n %0A%0A%09%09\n@@ -412,17 +412,40 @@\n  = m\n- %25 len(a)\n+%0A%09%09if p %3E= len(a) %7B%0A%09%09%09p = 0%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-06_19-04-26",
+            "content": "@@ -427,13 +427,14 @@\n a%5B0%5D, %22%3E\n+ \n %5D%22)%0A%7D\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-06_19-04-36",
+            "content": "@@ -333,45 +333,24 @@\n  := \n+(\n p + 1\n-%0A%09%09if m %3E= len(a) %7B%0A%09%09%09m = 0%0A%09%09%7D\n+) %25 len(a)\n %0A%0A%09%09\n@@ -384,48 +384,24 @@\n .)%0A%0A\n-%0A\n %09%09p = m\n-%0A%09%09if p %3E= len(a) %7B%0A%09%09%09p = 0%0A%09%09%7D\n+ %25 len(a)\n %0A%09%7D%0A\n@@ -427,14 +427,13 @@\n a%5B0%5D, %22%3E\n- \n %5D%22)%0A%7D\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-06_19-05-50",
+            "content": "@@ -460,26 +460,26 @@\n rint\n-f\n+ln\n (%22%5B\n- %25d%3E %5D%5Cn\n %22, a%5B0%5D\n+, %22%3E %5D%22\n )%0A%7D\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-06_19-06-35",
+            "content": "@@ -272,13 +272,8 @@\n e %7B%0A\n-%09%09%09%09%0A\n %09%09%09%09\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-06_19-08-15",
+            "content": "@@ -268,16 +268,20 @@\n  else %7B%0A\n+%09%09%09%09\n %0A%09%09%09%09fmt\n@@ -413,21 +413,17 @@\n %0A%0A%09%09p = \n-p + 1\n+m\n %0A%09%09if p \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-04-06_19-09-16",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n, e int\n\tfmt.Scan(&n, &e)\n\n\ta := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\ta[i] = i + 1\n\t}\n\n\tp := e - 1\n\n\tfor len(a) > 1 {\n\t\tfmt.Print(\"[ \")\n\t\tfor i := 0; i < len(a); i++ {\n\t\t\tif i == p {\n\t\t\t\tfmt.Print(a[i], \"> \")\n\t\t\t} else {\n\n\t\t\t\tfmt.Print(a[i], \" \")\n\t\t\t}\n\t\t}\n\t\tfmt.Println(\"]\")\n\n\t\tm := p + 1\n\t\tif m >= len(a) {\n\t\t\tm = 0\n\t\t}\n\n\t\ta = append(a[:m], a[m+1:]...)\n\n\n\t\tp = p + 1\n\t\tif p >= len(a) {\n\t\t\tp = 0\n\t\t}\n\t}\n\n\tfmt.Printf(\"[ %d> ]\\n\", a[0])\n}",
+            "lines": "43"
+        }
+    ]
+}
