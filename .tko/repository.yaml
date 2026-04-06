@@ -13,7 +13,7 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@map_set
+- ed@rec
 tasks:
   ed@pintando: '{self:1, rate:100, study:17}'
   ed@mumia: '{self:1, rate:100, study:21}'
@@ -29,4 +29,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@map_set
+selected: ed@fractais_png
