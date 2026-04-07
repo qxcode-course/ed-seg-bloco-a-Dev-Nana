@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-06_19-48-11",
+            "content": "@@ -6,16 +6,28 @@\n ge main%0A\n+import %22fmt%22\n %0Afunc ma\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-04-06_19-49-04",
+            "content": "@@ -11,62 +11,20 @@\n in%0A%0A\n-import %22fmt%22%0A%0Afunc main() %7B%0A%09var m, n int%0A%09fmt.Scan(&m)\n+func main() %7B\n %0A%7D%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-04-07_12-03-02",
+            "content": "@@ -66,131 +66,7 @@\n (&m)\n-%0A%0A%09numeros := make(%5B%5Dint, m)%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09fmt.Scan(&numeros%5Bi%5D)%0A%09%7D%0A%0A%09var v %5B%5Dint%0A%0A%09fmt.Printf(%22%25d %22, numeros)\n %0A%7D%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-04-07_12-20-44",
+            "content": "@@ -41,16 +41,19 @@\n %7B%0A%09var m\n+, n\n  int%0A%09fm\n@@ -145,16 +145,29 @@\n i%5D)%0A%09%7D%0A%0A\n+%09var v %5B%5Dint%0A\n %0A%09fmt.Pr\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-07_12-25-17",
+            "content": "@@ -45,11 +45,8 @@\n ar m\n-, n\n  int\n@@ -141,131 +141,40 @@\n %5Bi%5D)\n- \n %0A%09%7D%0A%0A\n+%0A\n %09fmt.\n-Scan(&n)%0A%0A%09apagar := make(map%5Bint%5Dbool)%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09var x int%0A%09%09fmt.Scan(&x)%0A%09%09apagar%5Bx%5D = true%0A%09\n+Printf(%22%25d %22, numeros)%0A\n %7D%0A\n-%7D\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-04-07_13-10-00",
+            "content": "@@ -140,17 +140,18 @@\n eros%5Bi%5D)\n+ \n %0A\n-\n %09%7D%0A%0A%09fmt\n@@ -270,309 +270,5 @@\n %0A%09%7D%0A\n-%0A%09var resultado %5B%5Dint%0A%0A%09for _, v := range numeros %7B%0A%09%09if len(apagar) %3E 0 %7B%0A%09%09%09for k := range apagar %7B%0A%09%09%09%09if v == k %7B%0A%09%09%09%09%09break%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%09resultado = append(resultado, v)%0A%09%09%7D else %7B%0A%09%09%09resultado = append(resultado, v)%0A%09%09%7D%0A%09%7D%0A%0A%09for _, v := range resultado %7B%0A%09%09fmt.Printf(%22%25d %22, v)%0A%09%7D%0A%09fmt.Println()%0A%7D%0A\n+%7D\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-07_13-42-13",
+            "content": "@@ -165,24 +165,36 @@\n )%0A%0A%09\n-var primeiro int\n+apagar := make(map%5Bint%5Dbool)\n %0A%09fo\n@@ -249,40 +249,24 @@\n )%0A%09%09\n-if i == 0 %7B%0A%09%09%09primeiro = x %0A%09%09%7D\n+apagar%5Bx%5D = true\n %0A%09%7D%0A\n@@ -326,21 +326,135 @@\n %09if \n-v != primeiro\n+len(apagar) %3E 0 %7B%0A%09%09%09for k := range apagar %7B%0A%09%09%09%09if v == k %7B%0A%09%09%09%09%09break%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%09resultado = append(resultado, v)%0A%09%09%7D else\n  %7B%0A%09\n@@ -568,9 +568,10 @@\n intln()%0A\n-\n %7D\n+%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-07_13-43-47",
+            "content": "@@ -382,24 +382,81 @@\n  v)%0A%09%09%7D%0A%09%7D%0A%0A\n+%09for _, v := range resultado %7B%0A%09%09fmt.Printf(%22%25d %22, v)%0A%09%7D%0A\n %09fmt.Println\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-07_13-45-28",
+            "content": "@@ -142,15 +142,11 @@\n os%5Bi\n- - 1\n %5D)%0A\n+\n %09%7D%0A%0A\n@@ -165,36 +165,24 @@\n )%0A%0A%09\n-apagar := make(map%5Bint%5Dbool)\n+var primeiro int\n %0A%09fo\n@@ -237,24 +237,40 @@\n )%0A%09%09\n-apagar%5Bx%5D = true\n+if i == 0 %7B%0A%09%09%09primeiro = x %0A%09%09%7D\n %0A%09%7D%0A\n@@ -330,18 +330,21 @@\n %09if \n-!apagar%5Bv%5D\n+v != primeiro\n  %7B%0A%09\n@@ -390,69 +390,8 @@\n %09%7D%0A%0A\n-%09for _, v := range resultado %7B%0A%09%09fmt.Printf(%22%25d %22, v + 1)%0A%09%7D%0A\n %09fmt\n@@ -401,10 +401,9 @@\n intln()%0A\n+\n %7D\n-%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-07_13-47-06",
+            "content": "@@ -139,17 +139,17 @@\n meros%5Bi \n-+\n+-\n  1%5D)%0A%09%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-07_13-47-24",
+            "content": "@@ -138,16 +138,20 @@\n umeros%5Bi\n+ + 1\n %5D)%0A%09%7D%0A%0A%09\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-07_13-51-57",
+            "content": "@@ -204,9 +204,9 @@\n  := \n-1\n+0\n ; i \n@@ -431,16 +431,20 @@\n %22%25d %22, v\n+ + 1\n )%0A%09%7D%0A%09fm\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-07_13-54-37",
+            "content": "@@ -110,9 +110,9 @@\n ; i \n-%3E\n+%3C\n  m; \n@@ -196,25 +196,25 @@\n )%0A%09for i := \n-0\n+1\n ; i %3C n; i++\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-07_13-54-59",
+            "content": "@@ -105,14 +105,14 @@\n  := \n-1\n+0\n ; i \n-%3C\n+%3E\n  m; \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-07_13-55-13",
+            "content": "@@ -97,25 +97,25 @@\n )%0A%09for i := \n-0\n+1\n ; i %3C m; i++\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-07_13-55-28",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar m, n int\n\tfmt.Scan(&m)\n\n\tnumeros := make([]int, m)\n\tfor i := 0; i < m; i++ {\n\t\tfmt.Scan(&numeros[i])\n\t}\n\n\tfmt.Scan(&n)\n\n\tapagar := make(map[int]bool)\n\tfor i := 0; i < n; i++ {\n\t\tvar x int\n\t\tfmt.Scan(&x)\n\t\tapagar[x] = true\n\t}\n\n\tvar resultado []int\n\n\tfor _, v := range numeros {\n\t\tif !apagar[v] {\n\t\t\tresultado = append(resultado, v)\n\t\t}\n\t}\n\n\tfor _, v := range resultado {\n\t\tfmt.Printf(\"%d \", v)\n\t}\n\tfmt.Println()\n}\n",
+            "lines": "35"
+        }
+    ]
+}
