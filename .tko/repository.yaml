@@ -15,8 +15,9 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@basic
+- ed@rec
 - ed@map_set
+- ed@basic
 flags:
   inbox: inbox
   panel: graph
@@ -24,4 +25,4 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@manipulacao
+selected: ed@treinando
