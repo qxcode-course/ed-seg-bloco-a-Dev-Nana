@@ -11,7 +11,7 @@ func randInt(min, max int) int {
 
 func main() {
 	pen := NewPen(500, 500)   // cria um canvas de 500 de largura por 500 de altura
-	pen.SetRGB(255, 0, 0)     // muda a cor do pincel para vermelho
+	pen.SetRGB(30, 200, 11)     // muda a cor do pincel para vermelho
 	pen.SetPosition(250, 500) // move o pincel para x 250, y 500
 	pen.SetHeading(90)        // coloca o pincel apontando para cima
 	pen.Walk(100)             // anda 100 pixels
@@ -20,15 +20,16 @@ func main() {
 	pen.DrawCircle(50)        // desenha um círculo de raio 50
 	pen.Right(60)             // gira para direita 60 graus
 	pen.Walk(150)
-	for range 10 {
+	for range 14 {
+		pen.SetLineWidth(5)
 		pen.Up()
-		pen.Walk(30) // anda sem riscar
+		pen.Walk(10) // anda sem riscar
 		pen.Down()
-
-		pen.DrawCircle(10) //desenha um circulo pequeno
+		pen.SetRGB(255, 0, 0) 
+		pen.DrawCircle(-20) //desenha um circulo pequeno
 
 		pen.Up()
-		pen.Walk(-30) // volta sem riscar
+		pen.Walk(20) // volta sem riscar
 		pen.Down()
 
 		pen.Left(36) // gira
