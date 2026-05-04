@@ -1,0 +1,63 @@
+2026-05-04 02:02:58, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-05-04 02:03:00, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0
+2026-05-04 02:03:00, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-05-04 02:11:11, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-05-04 02:13:46, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-05-04 02:22:42, EXEC, v:1, k:ed@labirinto, mode:FULL, size:70, fail:COMP
+2026-05-04 02:22:45, EXEC, v:1, k:ed@labirinto, mode:FULL, fail:COMP
+2026-05-04 02:22:53, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-05-04 02:23:24, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:71
+2026-05-04 02:23:46, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:66
+2026-05-04 02:23:57, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:71
+2026-05-04 02:25:06, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:76
+2026-05-04 02:26:51, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:83
+2026-05-04 02:26:48, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-05-04 02:26:50, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-05-04 02:29:02, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-05-04 02:29:18, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-05-04 02:40:08, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-05-04 02:40:47, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-05-04 02:40:52, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-05-04 02:40:55, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-05-04 02:42:40, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:83
+2026-05-04 02:43:08, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:83
+2026-05-04 02:43:22, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:83
+2026-05-04 02:43:50, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-05-04 02:43:22, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-05-04 02:49:49, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-05-04 02:55:21, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:83
+2026-05-04 02:55:21, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-05-04 02:55:56, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100, size:83
+2026-05-04 03:00:20, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
+2026-05-04 03:00:20, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-05-04 03:01:19, SELF, v:1, k:ed@labirinto, self:1, rate:100, study:100, concept:1, problem:1, refactor:1
+2026-05-04 03:01:29, MOVE, v:1, k:ed@eh_primo, mode:DOWN
+2026-05-04 03:01:30, MOVE, v:1, k:ed@eh_primo, mode:PICK
+2026-05-04 03:01:33, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:44, size:20
+2026-05-04 03:04:00, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:44
+2026-05-04 03:04:13, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:55, size:20
+2026-05-04 03:04:16, MOVE, v:1, k:ed@eh_primo, mode:BACK
+2026-05-04 03:04:28, MOVE, v:1, k:ed@eh_primo, mode:PICK
+2026-05-04 03:01:29, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-05-04 03:01:29, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-05-04 03:04:12, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-05-04 03:04:13, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-05-04 03:20:25, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:66, size:23
+2026-05-04 03:20:22, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-05-04 03:20:25, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-05-04 03:20:33, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:55, size:21
+2026-05-04 03:20:38, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:66, size:23
+2026-05-04 03:22:20, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:88, size:27
+2026-05-04 03:24:22, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:88, size:31
+2026-05-04 03:24:28, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:88, size:31
+2026-05-04 03:24:45, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:88, size:27
+2026-05-04 03:25:11, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:44, size:27
+2026-05-04 03:25:09, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-05-04 03:25:10, MOVE, v:1, k:ed@eh_primo, mode:EDIT
+2026-05-04 03:26:19, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:88, size:31
+2026-05-04 03:27:01, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:100, size:32
+2026-05-04 03:27:57, MOVE, v:1, k:ed@eh_primo, mode:BACK
+2026-05-04 03:28:09, MOVE, v:1, k:ed@eh_primo, mode:PICK
+2026-05-04 03:28:11, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:100, size:31
+2026-05-04 03:28:12, MOVE, v:1, k:ed@eh_primo, mode:BACK
+2026-05-04 03:28:40, SELF, v:1, k:ed@eh_primo, self:1, rate:100, study:30

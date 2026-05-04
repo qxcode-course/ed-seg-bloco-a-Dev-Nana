@@ -16,13 +16,14 @@ sources:
   tasks: null
 expanded:
 - ed@rec
-- ed@map_set
 - ed@basic
+- ed@map_set
 flags:
-  inbox: inbox
+  inbox: all
   panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@treinando
+selected: ed@eh_primo
+selected_index: 25

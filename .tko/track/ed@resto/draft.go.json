@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-29_13-51-20",
+            "content": "@@ -42,125 +42,34 @@\n    f\n-unc processa (n int)%7B%0A        if n == 0 %7B%0A        return%0A        %7D%0A%0A    processa(n / 2)%0A%0A    fmt.Println(n/2)%0A    %7D   \n+mt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-29_21-54-32",
+            "content": "@@ -19,17 +19,34 @@\n t %22fmt%22%0A\n-%0A\n+func main() %7B%0A    \n func pro\n@@ -54,19 +54,26 @@\n essa\n+ \n (n int)\n- \n %7B%0A\n-%09\n+        \n if n\n@@ -84,22 +84,38 @@\n 0 %7B%0A\n-%09%09return%0A%09%7D%0A%0A%09\n+        return%0A        %7D%0A%0A    \n proc\n@@ -127,17 +127,20 @@\n n / 2)%0A%0A\n-%09\n+    \n fmt.Prin\n@@ -150,72 +150,17 @@\n (n/2\n-, n%252)%0A%7D%0A%0Afunc main() %7B%0A\n+)%0A  \n   \n+%7D\n   \n-var n int%0A%09fmt.Scan(&n)%0A%0A%09processa(n)\n+ \n %0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-29_21-56-12",
+            "content": "@@ -44,17 +44,8 @@\n int)\n- %5B%5D%5B2%5Dint\n  %7B%0A%09\n@@ -68,28 +68,14 @@\n turn\n- nil\n %0A%09%7D%0A%0A%09\n-result := \n proc\n@@ -90,51 +90,30 @@\n  2)%0A\n-%09return append(result, %5B2%5Dint%7Bn / 2, n %25 2%7D\n+%0A%09fmt.Println(n/2, n%252\n )%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-29_22-10-57",
+            "content": "@@ -189,108 +189,34 @@\n int%0A\n-    result := processa(n)%0A%0A    for _, par := range result %7B%0A        fmt.Println(par%5B0%5D, par%5B1%5D)%0A    %7D\n+%09fmt.Scan(&n)%0A%0A%09processa(n)\n %0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-29_22-13-00",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -171,17 +171,20 @@\n ain() %7B%0A\n-%09\n+    \n var n in\n@@ -189,24 +189,12 @@\n int%0A\n-%09fmt.Scan(&n)%0A%0A%09\n+    \n resu\n@@ -212,17 +212,20 @@\n ssa(n)%0A%0A\n-%09\n+    \n for _, p\n@@ -225,17 +225,16 @@\n or _, pa\n-i\n r := ran\n@@ -245,18 +245,24 @@\n esult %7B%0A\n-%09%09\n+        \n fmt.Prin\n@@ -271,17 +271,16 @@\n n(pa\n-i\n r%5B0%5D, pa\n ir%5B1\n@@ -279,15 +279,18 @@\n , pa\n-i\n r%5B1%5D)%0A\n-%09\n+    \n %7D%0A%7D\n+%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-29_22-13-19",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc processa(n int) [][2]int {\n\tif n == 0 {\n\t\treturn nil\n\t}\n\n\tresult := processa(n / 2)\n\treturn append(result, [2]int{n / 2, n % 2})\n}\n\nfunc main() {\n\tvar n int\n\tfmt.Scan(&n)\n\n\tresult := processa(n)\n\n\tfor _, pair := range result {\n\t\tfmt.Println(pair[0], pair[1])\n\t}\n}",
+            "lines": "23"
+        }
+    ]
+}
