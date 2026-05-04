@@ -23,7 +23,6 @@ func main() {
 	for range 14 {
 		pen.SetLineWidth(5)
 		pen.Up()
-		pen.Walk(10) // anda sem riscar
 		pen.Down()
 		pen.SetRGB(255, 0, 0) 
 		pen.DrawCircle(-20) //desenha um circulo pequeno
