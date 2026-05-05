@@ -15,15 +15,13 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@map_set
-- ed@basic
-- ed@rec
+- ed@list
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@fractais_png
-selected_index: 41
+selected: ed@editorint
+selected_index: 14
