@@ -15,13 +15,15 @@ sources:
   quests: null
   tasks: null
 expanded:
+- ed@rec
 - ed@list
+- ed@backtrack
 flags:
   inbox: all
   panel: skills
-  show_panel: 'true'
+  show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
 selected: ed@editorint
-selected_index: 14
+selected_index: 44
