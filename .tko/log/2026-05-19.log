@@ -1,0 +1,6 @@
+2026-05-19 19:42:59, MOVE, v:1, k:ed@vetbuild, mode:DOWN
+2026-05-19 19:43:01, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-19 19:45:03, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-19 19:49:25, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-19 19:55:49, EXEC, v:1, k:ed@vetbuild, mode:FULL, size:130, fail:COMP
+2026-05-19 20:05:44, MOVE, v:1, k:ed@vetbuild, mode:BACK
