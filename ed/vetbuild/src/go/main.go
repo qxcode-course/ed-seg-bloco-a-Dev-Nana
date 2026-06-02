@@ -124,10 +124,6 @@ func (v *Vector) String() string {
 	return  "[" + Join(v.data[:v.size], ", ") + "]"
 }
 
-func (v *Vector) Slice(start, end int) []int{
-	if start < 0 || end > v.size || start > end {
-}
-
 func Join(slice []int, sep string) string {
 	if len(slice) == 0 {
 		return ""
@@ -138,6 +134,22 @@ func Join(slice []int, sep string) string {
 		fmt.Fprintf(&result, "%s%d", sep, value)
 	}
 	return result.String()
+}
+
+func (v *Vector) Slice(start, end int) *Vector{
+	if start > 0 {
+		start = v.size - start
+	}
+	if end > 0{
+		end = v.size - end
+	}
+
+	vectorSlice := NewVector(end - start)
+	for i := start; i < end; i++ {
+		vectorSlice.PushBack(v.data[i])
+	}
+	return vectorSlice
+
 }
 
 func main() {
@@ -223,8 +235,8 @@ func main() {
 			}
 			
 		case "reserve":
-			// newCapacity, _ := strconv.Atoi(parts[1])
-			// v.Reserve(newCapacity)
+			newCapacity, _ := strconv.Atoi(parts[1])
+			v.Reserve(newCapacity)
 		case "slice":
 			start, _ := strconv.Atoi(parts[1])
 			end, _ := strconv.Atoi(parts[2])
