@@ -21,15 +21,9 @@ func NewVector(capacity int) *Vector {
 		capacity: capacity,
 	}
 }
-
 func (v *Vector) Get(index int) bool{
-	if index < 0 || index > v.size{
-		return true
-	}
-
-	return false
+	return index < 0 || index >= v.size
 }
-
 func (v *Vector) At(index int) (int, error) {
 	if v.Get(index){
 		return 0, fmt.Errorf("index out of range")
@@ -39,15 +33,14 @@ func (v *Vector) At(index int) (int, error) {
 }
 func (v *Vector) Clear(){
 	for i := 0; i < v.size; i++ {
-		v.data[i] = 0
+			v.data[i] = 0
 	}
+	v.size = 0
 }
-
 func (v *Vector) Erase(index int) error {
 	if index > v.size {
 		return fmt.Errorf("index out of range")
 	}
-
 	for i := index; i < v.size-1; i++ {
 		v.data[i] = v.data[i+1]
 	}
@@ -55,29 +48,24 @@ func (v *Vector) Erase(index int) error {
 	v.size--
 	return nil
 }
-
 func (v *Vector) IndexOf(value int) int {
 	for i := 0; i < v.size; i++ { 
 		if v.data[i] == value {
 			return i
 		}
 	}
-
 	return -1
 }
-
 func (v *Vector) PopBack() error {
 	if v.size == 0 {
-		return fmt.Errorf("Vector is empty")
+		return fmt.Errorf("vector is empty")
 	}
 	v.size--
 	return nil
 }
-
 func (v *Vector) Status() string {
 	return fmt.Sprintf("size:%d capacity:%d\n", v.size, v.capacity)
 }
-
 func (v *Vector) Reserve(newCapacity int) {
 	vetData := make([]int, newCapacity)
 	for i := 0; i < v.size; i++ {
@@ -95,16 +83,13 @@ func (v *Vector) PushBack(value int) {
 	if v.capacity == 0 {
 		v.Reserve(1)
 	}
-
 	v.data[v.size] = value
 	v.size++
 }
-
 func (v *Vector) Set(index, value int) error{
 	if v.Get(index){
 		return fmt.Errorf("index out of range")
 	}
-
 	v.data [index] = value
 	return nil
 }
@@ -123,7 +108,6 @@ func (v *Vector) Insert(index int, value int) error {
 func (v *Vector) String() string {
 	return  "[" + Join(v.data[:v.size], ", ") + "]"
 }
-
 func Join(slice []int, sep string) string {
 	if len(slice) == 0 {
 		return ""
@@ -135,21 +119,51 @@ func Join(slice []int, sep string) string {
 	}
 	return result.String()
 }
-
 func (v *Vector) Slice(start, end int) *Vector{
-	if start > 0 {
-		start = v.size - start
+	if start == -1 {
+		result := NewVector(v.size)
+		for i := 0; i < v.size; i++ {
+			result.data[i] = v.data[v.size-1-i]
+		}
+		result.size = v.size
+		return &Vector{
+			data:     result.data,
+			size:     result.size,
+			capacity: result.capacity,
+		}
 	}
-	if end > 0{
-		end = v.size - end
+	if end == -1 {
+		end = v.size - 1
 	}
 
-	vectorSlice := NewVector(end - start)
-	for i := start; i < end; i++ {
-		vectorSlice.PushBack(v.data[i])
+	if start < 0 || end > v.size || start > end {
+		return nil
 	}
-	return vectorSlice
 
+	tamanho := end - start
+
+	result := NewVector(tamanho)
+	for i := 0; i < tamanho; i++ {
+		result.data[i] = v.data[start+i]
+	}
+	result.size = tamanho
+	return result
+}
+
+func (v *Vector) Contains(value int) bool {
+	left := 0 
+	right := v.size
+	for left < right {
+		mid := (left+right) / 2
+		if v.data[mid] == value {
+			return true
+		} else if v.data[mid] < value {
+			left = mid + 1
+		} else {
+			right = mid
+		}	
+	}
+	return false
 }
 
 func main() {
@@ -186,10 +200,10 @@ func main() {
 		case "status":
 			fmt.Print(v.Status())
 		case "pop":
-			// err := v.PopBack()
-			// if err != nil {
-			// 	fmt.Println(err)
-			// }
+			err := v.PopBack()
+			if err != nil {
+				fmt.Println(err)
+			}
 		case "insert":
 			index, _ := strconv.Atoi(parts[1])
 			value, _ := strconv.Atoi(parts[2])
@@ -205,19 +219,18 @@ func main() {
 			}
 		case "indexOf":
 			value, _ := strconv.Atoi(parts[1])
+			
 			index := v.IndexOf(value)
 			fmt.Println(index)
 		case "contains":
-			// value, _ := strconv.Atoi(parts[1])
-			// if v.Contains(value) {
-			// 	fmt.Println("true")
-			// } else {
-			// 	fmt.Println("false")
-			// }
+			value, _ := strconv.Atoi(parts[1])
+			if v.Contains(value) {
+				fmt.Println("true")
+			} else {
+				fmt.Println("false")
+			}
 		case "clear":
 			v.Clear()
-		case "capacity":
-			// fmt.Println(v.Capacity())
 		case "get":
 			index, _ := strconv.Atoi(parts[1])
 			value, err := v.At(index)
