@@ -13,12 +13,12 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
 - ed@basic
+- ed@map_set
 - ed@rec
 - ed@vector
-- ed@map_set
 - ed@backtrack
+- ed@list
 flags:
   inbox: all
   panel: graph
@@ -26,5 +26,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@editor
-selected_index: 57
+selected: ed@lista_d2
+selected_index: 51
