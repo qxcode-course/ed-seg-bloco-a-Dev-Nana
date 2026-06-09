@@ -13,12 +13,12 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@basic
-- ed@map_set
-- ed@rec
+- ed@list
 - ed@vector
 - ed@backtrack
-- ed@list
+- ed@rec
+- ed@basic
+- ed@map_set
 flags:
   inbox: all
   panel: graph

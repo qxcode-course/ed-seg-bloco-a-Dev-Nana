@@ -1,0 +1,6 @@
+2026-06-09 00:05:08, MOVE, v:1, k:ed@lista_d2, mode:BACK
+2026-06-09 00:05:17, MOVE, v:1, k:ed@lista_d2, mode:PICK
+2026-06-09 00:05:18, EXEC, v:1, k:ed@lista_d2, mode:FULL, rate:100
+2026-06-09 00:05:19, MOVE, v:1, k:ed@lista_d2, mode:BACK
+2026-06-09 00:06:44, SELF, v:1, k:ed@lista_d2, self:1, rate:100, study:240, concept:1, refactor:1
+2026-06-09 00:08:39, MOVE, v:1, k:ed@prin_list1, mode:DOWN
