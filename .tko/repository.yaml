@@ -13,18 +13,18 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@map_set
-- ed@basic
 - ed@rec
-- ed@backtrack
-- ed@list
+- ed@basic
 - ed@vector
+- ed@list
+- ed@backtrack
+- ed@map_set
 flags:
   inbox: all
-  panel: graph
+  panel: logs
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@lista_d3
-selected_index: 55
+selected: ed@prin_list2
+selected_index: 56
