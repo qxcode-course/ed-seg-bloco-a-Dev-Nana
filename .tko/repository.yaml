@@ -14,10 +14,10 @@ sources:
   quests: null
 expanded:
 - ed@list
-- ed@vector
 - ed@backtrack
-- ed@rec
+- ed@vector
 - ed@basic
+- ed@rec
 - ed@map_set
 flags:
   inbox: all
@@ -26,5 +26,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@lista_d2
-selected_index: 51
+selected: ed@prin_list1
+selected_index: 52

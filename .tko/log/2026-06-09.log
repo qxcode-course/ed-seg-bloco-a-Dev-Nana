@@ -4,3 +4,5 @@
 2026-06-09 00:05:19, MOVE, v:1, k:ed@lista_d2, mode:BACK
 2026-06-09 00:06:44, SELF, v:1, k:ed@lista_d2, self:1, rate:100, study:240, concept:1, refactor:1
 2026-06-09 00:08:39, MOVE, v:1, k:ed@prin_list1, mode:DOWN
+2026-06-09 00:11:52, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-06-09 00:33:51, MOVE, v:1, k:ed@prin_list1, mode:BACK
