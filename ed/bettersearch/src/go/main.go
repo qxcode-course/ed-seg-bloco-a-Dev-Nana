@@ -8,9 +8,24 @@ import (
 	"strings"
 )
 
-func BetterSearch(slice []int, value int) (bool, int) {
-	_, _ = slice, value
-	return false, 0
+func BetterSearch(arr []int, value int) (bool, int) {
+	low := 0
+	high := len(arr) 
+
+	for low < high {
+		mid := (low + high) / 2
+
+		if arr[mid] == value {
+			return true, mid
+		}
+		
+		if value < arr[mid] {
+			high = mid 
+		} else {
+			low = mid + 1
+		}
+	}
+	return false, low
 }
 
 func main() {

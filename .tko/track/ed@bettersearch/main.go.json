@@ -1,0 +1,89 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-09_21-02-15",
+            "content": "@@ -124,16 +124,27 @@\n  %7B%0A%09\n-low := 0\n+_, _ = slice, value\n %0A%09re\n@@ -159,11 +159,9 @@\n se, \n-low\n+0\n %0A%7D%0A%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-09_21-06-33",
+            "content": "@@ -131,9 +131,9 @@\n  := \n-2\n+0\n %0A%09re\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-09_21-06-58",
+            "content": "@@ -131,9 +131,9 @@\n  := \n-3\n+2\n %0A%09re\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-09_21-07-17",
+            "content": "@@ -133,120 +133,8 @@\n = 3%0A\n-%0A%09for i, elem := range slice %7B%0A%09%09if elem == value %7B%0A%09%09%09return true, i%0A%09%09%7D%0A%09%09if elem %3E value %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-09_22-09-51",
+            "content": "@@ -188,13 +188,22 @@\n %0A%09%09%09\n-break\n+return true, i\n %0A%09%09%7D\n@@ -230,23 +230,13 @@\n %0A%09%09%09\n+b\n re\n-turn false, i\n+ak\n %0A%09%09%7D\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-09_22-10-55",
+            "content": "@@ -131,9 +131,9 @@\n  := \n-0\n+3\n %0A%0A%09f\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-09_22-11-56",
+            "content": "@@ -188,22 +188,13 @@\n %0A%09%09%09\n+b\n re\n-turn true, i\n+ak\n %0A%09%09%7D\n@@ -208,9 +208,9 @@\n lem \n-%3C\n+%3E\n  val\n@@ -231,19 +231,17 @@\n  false, \n-low\n+i\n %0A%09%09%7D%0A%0A%09%7D\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-09_22-12-37",
+            "content": "@@ -217,9 +217,9 @@\n lem \n-%3E\n+%3C\n  val\n@@ -240,17 +240,19 @@\n  false, \n-i\n+low\n %0A%09%09%7D%0A%0A%09%7D\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-09_22-13-31",
+            "content": "@@ -129,16 +129,138 @@\n ow := 0%0A\n+%0A%09for i, elem := range slice %7B%0A%09%09if elem == value %7B%0A%09%09%09return true, i%0A%09%09%7D%0A%09%09if elem %3E value %7B%0A%09%09%09return false, i%0A%09%09%7D%0A%0A%09%7D%0A%0A\n %09return \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-09_22-16-45",
+            "content": "@@ -133,149 +133,8 @@\n = 0%0A\n-%09high := len(slice) - 1%0A%0A%09for low %3C high %7B%0A%09%09mid := (low + high) / 2%0A%0A%09%09if slice%5Bmid%5D == value %7B%0A%09%09%09return true, mid%0A%09%09%7D%0A%09%09low = mid + 1%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-09_22-19-26",
+            "content": "@@ -81,19 +81,21 @@\n rSearch(\n-arr\n+slice\n  %5B%5Dint, \n@@ -142,19 +142,21 @@\n  := len(\n-arr\n+slice\n ) - 1%0A%0A%09\n@@ -164,17 +164,16 @@\n or low %3C\n-=\n  high %7B%0A\n@@ -204,19 +204,21 @@\n 2%0A%0A%09%09if \n-arr\n+slice\n %5Bmid%5D ==\n@@ -256,65 +256,8 @@\n %7D%0A%09%09\n-%0A%09%09if value %3C arr%5Bmid%5D %7B%0A%09%09%09high = mid - 1%0A%09%09%7D else %7B%0A%09%09%09\n low \n@@ -266,20 +266,16 @@\n mid + 1%0A\n-%09%09%7D%0A\n %09%7D%0A%0A%09ret\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-09_22-40-02",
+            "content": "@@ -145,16 +145,19 @@\n en(arr) \n+- 1\n %0A%0A%09for l\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-09_22-40-10",
+            "content": "@@ -145,19 +145,16 @@\n en(arr) \n-- 1\n %0A%0A%09for l\n@@ -157,16 +157,17 @@\n or low %3C\n+=\n  high %7B%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-09_22-40-24",
+            "content": "@@ -145,16 +145,19 @@\n en(arr) \n+- 1\n %0A%0A%09for l\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-09_22-40-32",
+            "content": "@@ -282,16 +282,19 @@\n h = mid \n+- 1\n %0A%09%09%7D els\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-09_22-40-44",
+            "content": "@@ -318,16 +318,17 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%0A\n %09return \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-09_22-43-35",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc BetterSearch(arr []int, value int) (bool, int) {\n\tlow := 0\n\thigh := len(arr) \n\n\tfor low < high {\n\t\tmid := (low + high) / 2\n\n\t\tif arr[mid] == value {\n\t\t\treturn true, mid\n\t\t}\n\t\t\n\t\tif value < arr[mid] {\n\t\t\thigh = mid \n\t\t} else {\n\t\t\tlow = mid + 1\n\t\t}\n\t}\n\treturn false, low\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tslice := []int{}\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tfound, result := BetterSearch(slice, value)\n\tif found {\n\t\tfmt.Println(\"V\", result)\n\t} else {\n\t\tfmt.Println(\"F\", result)\n\t}\n}\n",
+            "lines": "48"
+        }
+    ]
+}

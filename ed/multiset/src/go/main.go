@@ -5,7 +5,58 @@ import (
 	"fmt"
 	"os"
 	"strings"
+	"strconv"
 )
+
+type MultiSet struct {
+	data []int
+	size int
+}
+
+func NewMultiSet(value int) *MultiSet{
+	return &MultiSet{data: []int{value}, size: 0}
+}
+
+func (ms *MultiSet) Search (value int) (bool, int) {
+	low := 0
+	high := ms.size
+
+	for low < high {
+		mid := (low + high) / 2
+		
+		if ms.data[mid] < value{
+			low = mid + 1
+		} else {
+			high =mid
+		}
+	}
+
+	if low < ms.size && ms.data[low] == value {
+		return true, low
+	}
+
+	return false, low
+}
+
+func (ms *MultiSet) insert(value int, index int) {
+	ms.data = append(ms.data, 0)
+
+	for i := ms.size; i > 0; i--{
+		ms.data[i] = ms.data[i-1]
+	}
+
+	ms.data[0] = value
+	ms.size++
+}
+
+func (ms *MultiSet) Insert(value int){
+	_, index := ms.Search(value)
+	ms.insert(value, index)
+}
+
+func (ms *MultiSet) String() string {
+	return "[" + Join(ms.data, ", ") + "]"
+}
 
 func Join(slice []int, sep string) string {
 	if len(slice) == 0 {
@@ -21,7 +72,7 @@ func Join(slice []int, sep string) string {
 func main() {
 	var line, cmd string
 	scanner := bufio.NewScanner(os.Stdin)
-	// ms := NewMultiSet(0)
+	ms := NewMultiSet(0)
 
 	for scanner.Scan() {
 		fmt.Print("$")
@@ -37,13 +88,15 @@ func main() {
 		case "end":
 			return
 		case "init":
-			// value, _ := strconv.Atoi(args[1])
-			// ms = NewMultiSet(value)
+			value, _ := strconv.Atoi(args[1])
+			ms = NewMultiSet(value)
 		case "insert":
-			// for _, part := range args[1:] {
-			// 	value, _ := strconv.Atoi(part)
-			// }
+			for _, part := range args[1:] {
+				value, _ := strconv.Atoi(part)
+				ms.Insert(value)
+			}
 		case "show":
+			fmt.Println(ms)
 		case "erase":
 			// value, _ := strconv.Atoi(args[1])
 		case "contains":
