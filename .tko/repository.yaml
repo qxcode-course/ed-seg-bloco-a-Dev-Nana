@@ -13,10 +13,10 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@list
-- ed@backtrack
 - ed@vector
+- ed@list
 - ed@linear
+- ed@backtrack
 flags:
   inbox: all
   panel: graph
