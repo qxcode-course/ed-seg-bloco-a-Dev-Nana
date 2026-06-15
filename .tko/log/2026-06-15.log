@@ -147,3 +147,33 @@
 2026-06-15 17:50:12, EXEC, v:1, k:ed@magicsearch, mode:FULL, rate:100
 2026-06-15 17:50:13, MOVE, v:1, k:ed@magicsearch, mode:BACK
 2026-06-15 17:51:14, SELF, v:1, k:ed@magicsearch, self:1, rate:100, study:33
+2026-06-15 17:53:29, MOVE, v:1, k:ed@iterador, mode:DOWN
+2026-06-15 17:53:31, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-06-15 17:53:29, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-15 17:53:29, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-15 17:53:29, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-15 17:53:29, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-15 17:58:58, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-15 18:05:26, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-15 18:15:44, MOVE, v:1, k:ed@iterador, mode:BACK
+2026-06-15 18:15:55, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-06-15 18:16:52, EXEC, v:1, k:ed@iterador, mode:FULL, rate:33, size:96
+2026-06-15 18:18:30, EXEC, v:1, k:ed@iterador, mode:FULL, rate:33, size:97
+2026-06-15 18:20:06, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66, size:104
+2026-06-15 18:20:09, MOVE, v:1, k:ed@iterador, mode:BACK
+2026-06-15 18:20:18, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-06-15 18:25:08, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-15 18:26:07, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-06-15 18:30:46, MOVE, v:1, k:ed@iterador, mode:BACK
+2026-06-15 18:31:01, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-06-15 18:32:33, EXEC, v:1, k:ed@iterador, mode:FULL, size:128, fail:COMP
+2026-06-15 18:32:41, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66, size:128
+2026-06-15 18:33:04, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66, size:128
+2026-06-15 18:33:15, EXEC, v:1, k:ed@iterador, mode:FULL, rate:100, size:128
+2026-06-15 18:33:26, MOVE, v:1, k:ed@iterador, mode:BACK
+2026-06-15 18:33:56, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-06-15 18:38:45, MOVE, v:1, k:ed@iterador, mode:BACK
+2026-06-15 18:38:53, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-06-15 18:38:54, EXEC, v:1, k:ed@iterador, mode:FULL, rate:100
+2026-06-15 18:38:56, MOVE, v:1, k:ed@iterador, mode:BACK
+2026-06-15 18:39:51, SELF, v:1, k:ed@iterador, self:1, rate:100, study:50

@@ -13,19 +13,20 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@dfs
 - ed@linear
-- ed@bfs
-- ed@list
-- ed@tree
 - ed@backtrack
+- ed@bfs
+- ed@tree
+- ed@list
 - ed@vector
+- ed@dfs
+- ed@rec
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@magicsearch
-selected_index: 8
+selected: ed@iterador
+selected_index: 33

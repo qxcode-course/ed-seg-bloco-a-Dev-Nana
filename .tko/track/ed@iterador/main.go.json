@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-15_18-16-52",
+            "content": "@@ -413,19 +413,8 @@\n ex%5D%0A\n-%09i.index--%0A\n %09ret\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-06-15_18-18-30",
+            "content": "@@ -348,136 +348,8 @@\n %0A%7D%0A%0A\n-func (l *MyList) ReverseIterator() *ReverseIterator %7B%0A%09return &ReverseIterator%7B%0A%09%09data: l.data,%0A%09%09index: len(l.data) - 1,%0A%09%7D%0A%7D%0A%0A\n func\n@@ -1332,24 +1332,27 @@\n everse%22:%0A%09%09%09\n+// \n fmt.Print(%22%5B\n@@ -1350,32 +1350,35 @@\n .Print(%22%5B %22)%0A%09%09%09\n+// \n for it := mylist\n@@ -1408,32 +1408,35 @@\n HasNext(); %7B%0A%09%09%09\n+// \n %09fmt.Printf(%22%25v \n@@ -1444,37 +1444,43 @@\n , it.Next())%0A%09%09%09\n+// \n %7D%0A%09%09%09\n+// \n fmt.Println(%22%5D%22)\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-06-15_18-20-06",
+            "content": "@@ -209,63 +209,8 @@\n %0A%7D%0A%0A\n-type CyclicIterator struct %7B%0A%09data %5B%5Dint%0A%09index int%0A%7D%0A%0A\n func\n@@ -871,275 +871,8 @@\n %0A%7D%0A%0A\n-func (l *MyList) CyclicIterator() *CyclicIterator %7B%0A%09return &CyclicIterator%7B%0A%09%09data: l.data,%0A%09%09index: 0,%0A%09%7D%0A%7D%0A%0Afunc (i *CyclicIterator) HasNext() bool %7B%0A%09return true%0A%7D%0A%0Afunc (i *CyclicIterator) Next() int %7B%0A%09value := i.data%5Bi.index%5D%0A%0A%09i.index = len(i.data)%0A%0A%09retu%0A%7D%0A%0A\n func\n",
+            "lines": "104"
+        },
+        {
+            "label": "2026-06-15_18-32-33",
+            "content": "@@ -1181,32 +1181,24 @@\n data)%0A%0A%09retu\n-rn value\n %0A%7D%0A%0Afunc mai\n@@ -1935,16 +1935,19 @@\n ic%22:%0A%09%09%09\n+// \n qtd, _ :\n@@ -1969,24 +1969,27 @@\n args%5B1%5D)%0A%09%09%09\n+// \n fmt.Print(%22%5B\n@@ -1995,16 +1995,19 @@\n %5B %22)%0A%09%09%09\n+// \n it := my\n@@ -2027,24 +2027,27 @@\n erator()%0A%09%09%09\n+// \n for range qt\n@@ -2049,24 +2049,27 @@\n ge qtd %7B%0A%09%09%09\n+// \n %09fmt.Printf(\n@@ -2081,37 +2081,43 @@\n , it.Next())%0A%09%09%09\n+// \n %7D%0A%09%09%09\n+// \n fmt.Println(%22%5D%22)\n",
+            "lines": "128"
+        },
+        {
+            "label": "2026-06-15_18-32-41",
+            "content": "@@ -1170,22 +1170,8 @@\n ex =\n- i.index + 1 %25\n  len\n",
+            "lines": "128"
+        },
+        {
+            "label": "2026-06-15_18-33-04",
+            "content": "@@ -1167,17 +1167,16 @@\n index = \n-(\n i.index \n@@ -1178,17 +1178,16 @@\n ndex + 1\n-)\n  %25 len(i\n",
+            "lines": "128"
+        },
+        {
+            "label": "2026-06-15_18-33-15",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype MyList struct {\n\tdata []int\n}\n\ntype Iterator struct {\n\tdata  []int\n\tindex int\n}\n\ntype ReverseIterator struct {\n\tdata []int\n\tindex int\n}\n\ntype CyclicIterator struct {\n\tdata []int\n\tindex int\n}\n\nfunc NewMyList(values []int) *MyList {\n\treturn &MyList{data: values}\n}\n\nfunc (i *ReverseIterator) HasNext() bool {\n\treturn i.index >= 0\n}\n\nfunc (l *MyList) ReverseIterator() *ReverseIterator {\n\treturn &ReverseIterator{\n\t\tdata: l.data,\n\t\tindex: len(l.data) - 1,\n\t}\n}\n\nfunc (i *ReverseIterator) Next() int {\n\tvalue := i.data[i.index]\n\ti.index--\n\treturn value\n}\n\nfunc (l *MyList) Iterator() *Iterator {\n\treturn &Iterator{data: l.data, index: -1}\n}\n\nfunc (i *Iterator) HasNext() bool {\n\treturn i.index < len(i.data)-1\n}\n\nfunc (i *Iterator) Next() int {\n\tif i.index == len(i.data) {\n\t\tpanic(fmt.Errorf(\"No more elements\"))\n\t}\n\ti.index += 1\n\treturn i.data[i.index]\n}\n\nfunc (l *MyList) CyclicIterator() *CyclicIterator {\n\treturn &CyclicIterator{\n\t\tdata: l.data,\n\t\tindex: 0,\n\t}\n}\n\nfunc (i *CyclicIterator) HasNext() bool {\n\treturn true\n}\n\nfunc (i *CyclicIterator) Next() int {\n\tvalue := i.data[i.index]\n\n\ti.index = (i.index + 1) % len(i.data)\n\n\treturn value\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tmylist := NewMyList([]int{})\n\tfor scanner.Scan() {\n\t\tline := scanner.Text()\n\t\targs := strings.Fields(line)\n\t\tfmt.Println(\"$\" + line)\n\n\t\tswitch args[0] {\n\t\tcase \"end\":\n\t\t\tbreak\n\t\tcase \"read\":\n\t\t\tfor i := 1; i < len(args); i++ {\n\t\t\t\tslice := make([]int, len(args)-1)\n\t\t\t\tfor i, value := range args[1:] {\n\t\t\t\t\tslice[i], _ = strconv.Atoi(value)\n\t\t\t\t}\n\t\t\t\tmylist = NewMyList(slice)\n\t\t\t}\n\t\tcase \"show\":\n\t\t\tfmt.Print(\"[ \")\n\t\t\tfor it := mylist.Iterator(); it.HasNext(); {\n\t\t\t\tfmt.Printf(\"%v \", it.Next())\n\t\t\t}\n\t\t\tfmt.Println(\"]\")\n\t\tcase \"reverse\":\n\t\t\tfmt.Print(\"[ \")\n\t\t\tfor it := mylist.ReverseIterator(); it.HasNext(); {\n\t\t\t\tfmt.Printf(\"%v \", it.Next())\n\t\t\t}\n\t\t\tfmt.Println(\"]\")\n\t\tcase \"cyclic\":\n\t\t\tqtd, _ := strconv.Atoi(args[1])\n\t\t\tfmt.Print(\"[ \")\n\t\t\tit := mylist.CyclicIterator()\n\t\t\tfor range qtd {\n\t\t\t\tfmt.Printf(\"%v \", it.Next())\n\t\t\t}\n\t\t\tfmt.Println(\"]\")\n\t\t}\n\t}\n\n}\n",
+            "lines": "128"
+        }
+    ]
+}
