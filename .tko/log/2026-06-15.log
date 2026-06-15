@@ -1,0 +1,128 @@
+2026-06-15 11:48:12, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-06-15 11:52:24, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:33, size:156
+2026-06-15 11:53:01, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-15 11:52:24, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-15 11:53:05, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:33, size:161
+2026-06-15 11:53:11, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:33, size:161
+2026-06-15 11:54:12, EXEC, v:1, k:ed@bufferring, mode:FULL, size:166, fail:COMP
+2026-06-15 11:54:17, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:66, size:166
+2026-06-15 11:55:16, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:66, size:175
+2026-06-15 11:55:45, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:83, size:175
+2026-06-15 11:56:52, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:100, size:183
+2026-06-15 11:56:55, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-06-15 11:58:04, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-06-15 11:58:05, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:100
+2026-06-15 12:01:53, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-06-15 12:02:04, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-06-15 12:04:05, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:100
+2026-06-15 12:04:06, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-06-15 12:05:42, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-15 12:04:05, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-06-15 12:11:09, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-15 12:11:22, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-15 12:13:03, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:25, size:21
+2026-06-15 12:13:16, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-15 12:13:34, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-15 13:12:42, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-15 13:12:56, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-15 13:12:58, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:25
+2026-06-15 13:12:59, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-15 13:24:54, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-15 13:25:22, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-15 13:26:02, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-15 13:26:05, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-15 13:26:23, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-15 13:26:43, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-15 13:33:20, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-15 13:34:07, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-15 13:34:26, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-15 13:39:12, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-15 13:39:25, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-15 13:40:50, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:25, size:23
+2026-06-15 13:40:53, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-15 13:41:01, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-15 13:41:18, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:75, size:23
+2026-06-15 13:41:43, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:23
+2026-06-15 13:41:47, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0
+2026-06-15 13:42:10, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0
+2026-06-15 13:42:17, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-15 13:42:29, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-15 13:43:45, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:29, size:28
+2026-06-15 13:44:04, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:24
+2026-06-15 13:44:12, EXEC, v:1, k:ed@subset_sum, mode:FULL, size:24, fail:COMP
+2026-06-15 13:44:16, EXEC, v:1, k:ed@subset_sum, mode:FULL, fail:COMP
+2026-06-15 13:44:26, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:75, size:24
+2026-06-15 13:45:02, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:22
+2026-06-15 13:45:13, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:25, size:24
+2026-06-15 13:46:06, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-15 13:46:13, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-15 13:46:43, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:75, size:28
+2026-06-15 13:46:52, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-15 13:46:59, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-15 13:46:42, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-15 13:46:43, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-15 13:56:23, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:75
+2026-06-15 13:56:24, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-15 13:56:29, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-15 13:56:31, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-15 13:56:36, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-15 13:56:48, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:29, size:28
+2026-06-15 13:58:08, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:24
+2026-06-15 13:58:14, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:28
+2026-06-15 13:58:41, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0
+2026-06-15 13:59:56, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100, size:28
+2026-06-15 14:00:00, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-15 14:00:44, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-15 13:59:55, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-15 13:59:56, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-15 14:25:48, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:100
+2026-06-15 14:25:49, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-15 14:26:53, SELF, v:1, k:ed@subset_sum, self:1, rate:100, study:100, concept:1
+2026-06-15 14:27:21, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 14:35:04, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-06-15 14:35:16, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 14:40:07, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-06-15 14:41:26, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:25, size:35
+2026-06-15 14:41:31, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-06-15 14:42:09, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 14:51:29, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:8, size:37
+2026-06-15 14:51:33, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-06-15 14:51:49, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 15:25:20, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-06-15 15:25:35, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 15:25:36, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:8
+2026-06-15 15:25:38, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-06-15 15:25:50, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 15:31:49, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-06-15 15:31:56, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 15:34:42, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:25, size:49
+2026-06-15 15:34:54, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-06-15 15:35:04, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 15:44:52, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-06-15 15:45:03, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 15:47:26, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:8, size:51
+2026-06-15 15:47:23, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-06-15 15:47:26, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-06-15 16:20:20, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 16:20:21, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-06-15 16:20:23, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 16:20:26, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:8
+2026-06-15 16:23:02, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-06-15 16:23:07, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 16:27:27, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:8, size:51
+2026-06-15 16:27:42, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-06-15 16:27:42, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-06-15 16:28:50, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 16:28:51, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-06-15 16:29:02, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 16:29:07, MOVE, v:1, k:ed@n_rainhas, mode:EDIT
+2026-06-15 16:44:10, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 16:54:57, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-06-15 16:55:04, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 16:56:46, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 16:57:22, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:100, size:51
+2026-06-15 16:57:26, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-06-15 17:02:26, MOVE, v:1, k:ed@n_rainhas, mode:PICK
+2026-06-15 17:11:34, EXEC, v:1, k:ed@n_rainhas, mode:FULL, rate:100
+2026-06-15 17:11:34, MOVE, v:1, k:ed@n_rainhas, mode:BACK
+2026-06-15 17:12:15, SELF, v:1, k:ed@n_rainhas, self:1, rate:100, study:200, concept:1, refactor:1

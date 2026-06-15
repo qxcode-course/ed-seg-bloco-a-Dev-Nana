@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-14_18-29-15",
+            "content": "@@ -446,163 +446,7 @@\n    %7D\n-%0A%0A    fmt.Print(%22%5B%22)%0A    for i, p := range primos %7B%0A        if i %3E 0 %7B%0A            fmt.Print(%22, %22)%0A        %7D%0A        fmt.Print(p)%0A    %7D%0A    fmt.Println(%22%5D%22)\n %0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-06-14_18-40-41",
+            "content": "package main\nimport \"fmt\"\n\nfunc primo (n int, div int) bool{\n    if n < 2{\n        return false\n    }\n    if div == 1{\n        return true\n    }\n    if n%div == 0{\n        return false\n    }\n    return primo (n, div-1)\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n    primos := []int{}\n    atual := 2\n\n    for len(primos) < n{\n        if primo(atual, atual-1) {\n            primos = append(primos, atual)\n        }\n        \n        atual ++\n    }\n\n    fmt.Print(\"[\")\n    for i, p := range primos {\n        if i > 0 {\n            fmt.Print(\", \")\n        }\n        fmt.Print(p)\n    }\n    fmt.Println(\"]\")\n}\n",
+            "lines": "39"
+        }
+    ]
+}

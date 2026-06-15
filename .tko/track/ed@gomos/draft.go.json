@@ -2,8 +2,18 @@
     "patches": [
         {
             "label": "2026-03-24_19-03-44",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -41,296 +41,35 @@\n     \n-%0A    var q int%0A    var dir string%0A%0A    fmt.Scan(&q, &dir)%0A%0A    var x, y int%0A    fmt.Scan(&x, &y)%0A%0A    switch dir%7B%0A        case %22L%22:%0A            x--%0A        case %22R%22:%0A            x++%0A        case %22U%22:%0A            y--%0A        case %22D%22:%0A            y++%0A    %7D%0A%0A    fmt.Println(x, y)%0A%0A    _ = q\n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-06-10_15-09-41",
+            "content": "@@ -315,11 +315,22 @@\n ln(x, y)\n+%0A%0A    _ = q\n %0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-06-10_15-15-15",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    \n    var q int\n    var dir string\n\n    fmt.Scan(&q, &dir)\n\n    var x, y int\n    fmt.Scan(&x, &y)\n\n    switch dir{\n        case \"L\":\n            x--\n        case \"R\":\n            x++\n        case \"U\":\n            y--\n        case \"D\":\n            y++\n    }\n\n    fmt.Println(x, y)\n}\n",
+            "lines": "25"
         }
     ]
 }

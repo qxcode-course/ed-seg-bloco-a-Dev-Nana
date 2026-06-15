@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-15_14-41-26",
+            "content": "@@ -267,26 +267,8 @@\n    %7D\n-%0A%0A        v = true\n %0A   \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-06-15_14-51-29",
+            "content": "@@ -277,265 +277,16 @@\n     \n-diffCol := colunas%5Bi%5D - coluna%0A        if diffCol %3C 0 %7B%0A            diffCol = -diffCol%0A        %7D%0A%0A        diffLin := i - linha%0A        if diffLin %3C 0 %7B%0A            diffLin = -diffLin%0A        %7D%0A%0A        if diffCol == diffLin %7B%0A            v = false%0A        %7D\n+v = true\n %0A   \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-06-15_15-34-42",
+            "content": "@@ -134,75 +134,36 @@\n     \n-%0A    for coluna := 0; coluna %3C n; coluna++%7B%0A        v := true%0A%0A    \n+v := true%0A    coluna := 0%0A%0A%0A\n     \n@@ -400,25 +400,16 @@\n - linha%0A\n-        %0A\n         \n@@ -537,20 +537,17 @@\n %7D%0A    %7D%0A\n-    \n+%0A\n     if v\n@@ -549,20 +549,16 @@\n  if v %7B%0A\n-    \n         \n@@ -589,20 +589,16 @@\n         \n-   \n- \n total +=\n@@ -629,26 +629,15 @@\n  n)%0A\n-        %7D%0A\n     %7D%0A%0A\n-%0A\n     \n@@ -760,17 +760,17 @@\n olunas, \n-n\n+0\n , n))%0A%7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-15_15-47-26",
+            "content": "@@ -563,19 +563,20 @@\n     v = \n-tru\n+fals\n e%0A      \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-15_16-27-27",
+            "content": "@@ -555,36 +555,35 @@\n             v = \n-fals\n+tru\n e%0A        %7D%0A    \n@@ -829,17 +829,17 @@\n olunas, \n-0\n+n\n , n))%0A%7D%0A\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-15_16-57-22",
+            "content": "package main\nimport \"fmt\"\n\nfunc solve(colunas []int, linha int, n int) int{\n    if linha == n{\n        return 1\n    }\n    total := 0\n    \n    for coluna := 0; coluna < n; coluna++{\n        v := true\n\n        for i := 0; i < linha; i++{\n        \n        if colunas[i] == coluna{\n            v = false\n        }\n\n        diffCol := colunas[i] - coluna\n        if diffCol < 0 {\n            diffCol = -diffCol\n        }\n\n        diffLin := i - linha\n        \n        if diffLin < 0 {\n            diffLin = -diffLin\n        }\n\n        if diffCol == diffLin {\n            v = false\n        }\n    }\n        if v {\n            colunas[linha] = coluna\n            total += solve(colunas, linha+1, n)\n        }\n    }\n\n\n    return total\n}\n\nfunc main() {\n    var n int\n    fmt.Scan(&n)\n\n    colunas := make([]int, n)\n\n    fmt.Println(solve(colunas, 0, n))\n}\n",
+            "lines": "51"
+        }
+    ]
+}

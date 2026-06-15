@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-15_12-13-03",
+            "content": "@@ -75,36 +75,8 @@\n l %7B%0A\n-    if pos == len(vet)%7B%0A    \n     \n@@ -88,22 +88,16 @@\n n false%0A\n-    %7D%0A\n     retu\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-15_13-40-50",
+            "content": "@@ -114,11 +114,12 @@\n urn \n-tru\n+fals\n e%0A  \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-06-15_13-41-18",
+            "content": "@@ -82,19 +82,23 @@\n  if \n-target == 0\n+pos == len(vet)\n %7B%0A  \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-06-15_13-41-43",
+            "content": "@@ -121,62 +121,8 @@\n   %7D%0A\n-%0A    if pos == len(vet) %7B%0A        return false%0A    %7D%0A%0A\n     \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-06-15_13-43-45",
+            "content": "@@ -91,16 +91,68 @@\n t == 0%7B%0A\n+        return true%0A    %7D%0A%0A    if pos == len(vet) %7B%0A\n         \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-06-15_13-44-04",
+            "content": "@@ -83,23 +83,18 @@\n if t\n-pos == len(vet)\n+arget == 0\n %7B%0A  \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-06-15_13-44-12",
+            "content": "@@ -78,16 +78,17 @@\n %0A    if \n+t\n pos == l\n@@ -115,11 +115,12 @@\n urn \n-tru\n+fals\n e%0A  \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-06-15_13-44-26",
+            "content": "@@ -79,59 +79,65 @@\n     \n-%0A%0A    return subset(vet, pos+1, target-vet%5Bpos%5D) %7C%7C\n+if pos == len(vet)%7B%0A        return true%0A    %7D%0A%0A    return\n  sub\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-06-15_13-45-02",
+            "content": "@@ -79,54 +79,8 @@\n     \n-if pos == len(vet)%7B%0A        return false%0A    %7D\n %0A%0A  \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-15_13-45-13",
+            "content": "@@ -75,56 +75,8 @@\n l %7B%0A\n-    if target == 0 %7B%0A        return true%0A    %7D%0A%0A\n     \n@@ -114,11 +114,12 @@\n urn \n-tru\n+fals\n e%0A  \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-06-15_13-46-43",
+            "content": "@@ -162,12 +162,11 @@\n urn \n-fals\n+tru\n e%0A  \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-06-15_13-56-48",
+            "content": "@@ -115,24 +115,76 @@\n true%0A    %7D%0A%0A\n+    if pos == len(vet)%7B%0A        return false%0A    %7D%0A%0A\n     return s\n@@ -421,17 +421,17 @@\n et(vet, \n-0\n+n\n , m))%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-06-15_13-58-08",
+            "content": "@@ -123,60 +123,8 @@\n  %7D%0A%0A\n-    if pos == len(vet)%7B%0A        return false%0A    %7D%0A%0A\n     \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-06-15_13-58-14",
+            "content": "@@ -134,9 +134,9 @@\n pos \n-%3E\n+=\n = le\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-06-15_13-59-56",
+            "content": "package main\nimport \"fmt\"\n\nfunc subset(vet []int, pos int, target int) bool {\n    if target == 0 {\n        return true\n    }\n\n    if pos >= len(vet){\n        return false\n    }\n\n    return subset(vet, pos+1, target-vet[pos]) || subset(vet, pos+1, target)\n}\n\nfunc main() {\n    var n, m int\n\n    fmt.Scan(&n, &m)\n\n    vet := make([]int, n)\n\n    for i := 0; i < n; i++{\n        fmt.Scan(&vet[i])\n    }\n\n    fmt.Println(subset(vet, 0, m))\n}\n",
+            "lines": "28"
+        }
+    ]
+}

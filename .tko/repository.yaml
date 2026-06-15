@@ -13,19 +13,22 @@ sources:
   writeable: false
   quests: null
 expanded:
+- ed@backtrack
 - ed@linear
 - ed@map_set
-- ed@rec
-- ed@backtrack
 - ed@vector
-- ed@list
+- ed@dfs
+- ed@bfs
+- ed@tree
+- ed@rec
 - ed@basic
+- ed@list
 flags:
   inbox: all
-  panel: logs
-  show_panel: 'true'
+  panel: graph
+  show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@rec
-selected_index: 17
+selected: ed@n_rainhas
+selected_index: 76
