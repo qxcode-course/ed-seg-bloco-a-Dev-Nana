@@ -13,14 +13,11 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@linear
+- ed@dfs
 - ed@backtrack
+- ed@linear
 - ed@bfs
 - ed@tree
-- ed@list
-- ed@vector
-- ed@dfs
-- ed@rec
 flags:
   inbox: all
   panel: skills
@@ -28,5 +25,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@iterador
-selected_index: 33
+selected: ed@bufferring
+selected_index: 6

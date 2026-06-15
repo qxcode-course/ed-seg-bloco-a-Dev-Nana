@@ -177,3 +177,7 @@
 2026-06-15 18:38:54, EXEC, v:1, k:ed@iterador, mode:FULL, rate:100
 2026-06-15 18:38:56, MOVE, v:1, k:ed@iterador, mode:BACK
 2026-06-15 18:39:51, SELF, v:1, k:ed@iterador, self:1, rate:100, study:50
+2026-06-15 18:43:40, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-06-15 18:43:41, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:100
+2026-06-15 18:43:43, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-06-15 18:44:08, SELF, v:1, k:ed@bufferring, self:1, rate:100, study:180, concept:1, refactor:1
