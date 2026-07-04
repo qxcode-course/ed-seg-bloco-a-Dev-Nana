@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-17_06-52-24",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,208 +23,53 @@\n mt%22%0A\n-%0Afunc coef(n, k int) int (%0A    if k == 0 %7C%7C k == n %7B%0A        return 1%0A    %7D%0A    return coef(n-1, k-1) + coef(n-1, k)%0A)%0A%0Afunc main() %7B%0A    var n, k int%0A%0A    fmt.Scan($n, &k)%0A%0A    fmt.Println(coef(n, k)\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-17_06-56-16",
+            "content": "@@ -185,17 +185,17 @@\n mt.Scan(\n-&\n+$\n n, &k)%0A%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-17_06-56-23",
+            "content": "@@ -45,17 +45,17 @@\n nt) int \n-%7B\n+(\n %0A    if \n@@ -137,17 +137,17 @@\n n-1, k)%0A\n-%7D\n+)\n %0A%0Afunc m\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-17_06-57-07",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc coef(n, k int) int {\n    if k == 0 || k == n {\n        return 1\n    }\n    return coef(n-1, k-1) + coef(n-1, k)\n}\n\nfunc main() {\n    var n, k int\n\n    fmt.Scan(&n, &k)\n\n    fmt.Println(coef(n, k))\n}\n",
+            "lines": "18"
+        }
+    ]
+}

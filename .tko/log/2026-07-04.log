@@ -1,0 +1,76 @@
+2026-07-04 16:04:49, MOVE, v:1, k:ed@pilha, mode:PICK
+2026-07-04 16:09:08, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0, size:80
+2026-07-04 16:09:08, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-04 16:45:49, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-04 16:49:34, EXEC, v:1, k:ed@pilha, mode:FULL, size:84, fail:COMP
+2026-07-04 16:50:13, EXEC, v:1, k:ed@pilha, mode:FULL, size:86, fail:COMP
+2026-07-04 16:50:22, EXEC, v:1, k:ed@pilha, mode:FULL, size:86, fail:COMP
+2026-07-04 16:50:36, EXEC, v:1, k:ed@pilha, mode:FULL, size:86, fail:COMP
+2026-07-04 16:51:30, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-04 16:53:31, EXEC, v:1, k:ed@pilha, mode:FULL, size:86, fail:COMP
+2026-07-04 16:55:38, EXEC, v:1, k:ed@pilha, mode:FULL, size:87, fail:COMP
+2026-07-04 16:55:55, EXEC, v:1, k:ed@pilha, mode:FULL, size:87, fail:COMP
+2026-07-04 16:56:15, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0, size:87
+2026-07-04 16:56:13, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-04 16:56:15, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-04 16:57:44, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0
+2026-07-04 16:57:46, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-07-04 16:57:56, MOVE, v:1, k:ed@pilha, mode:PICK
+2026-07-04 17:02:22, EXEC, v:1, k:ed@pilha, mode:FULL, rate:33, size:91
+2026-07-04 17:02:20, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-04 17:02:21, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-04 17:04:46, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0, size:94
+2026-07-04 17:06:49, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0, size:96
+2026-07-04 17:07:15, EXEC, v:1, k:ed@pilha, mode:FULL, rate:33, size:96
+2026-07-04 17:07:50, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-04 17:07:14, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-04 17:10:44, EXEC, v:1, k:ed@pilha, mode:FULL, size:93, fail:COMP
+2026-07-04 17:12:37, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-04 17:12:54, EXEC, v:1, k:ed@pilha, mode:FULL, size:96, fail:COMP
+2026-07-04 17:13:05, EXEC, v:1, k:ed@pilha, mode:FULL, rate:33, size:96
+2026-07-04 17:14:16, EXEC, v:1, k:ed@pilha, mode:FULL, size:96, fail:COMP
+2026-07-04 17:17:36, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-04 17:13:04, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-04 17:18:30, EXEC, v:1, k:ed@pilha, mode:FULL, size:106, fail:COMP
+2026-07-04 17:19:17, EXEC, v:1, k:ed@pilha, mode:FULL, rate:33, size:110
+2026-07-04 17:21:26, EXEC, v:1, k:ed@pilha, mode:FULL, size:114, fail:COMP
+2026-07-04 17:21:33, EXEC, v:1, k:ed@pilha, mode:FULL, fail:COMP
+2026-07-04 17:21:39, EXEC, v:1, k:ed@pilha, mode:FULL, size:114, fail:COMP
+2026-07-04 17:21:56, EXEC, v:1, k:ed@pilha, mode:FULL, size:114, fail:COMP
+2026-07-04 17:21:45, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-04 17:19:16, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-04 17:23:15, EXEC, v:1, k:ed@pilha, mode:FULL, rate:66, size:114
+2026-07-04 17:27:37, EXEC, v:1, k:ed@pilha, mode:FULL, size:121, fail:COMP
+2026-07-04 17:27:29, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-04 17:23:14, MOVE, v:1, k:ed@pilha, mode:EDIT
+2026-07-04 17:28:35, EXEC, v:1, k:ed@pilha, mode:FULL, size:122, fail:COMP
+2026-07-04 17:28:49, EXEC, v:1, k:ed@pilha, mode:FULL, rate:100, size:122
+2026-07-04 17:29:37, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-07-04 17:30:12, SELF, v:1, k:ed@pilha, self:1, rate:100, study:60
+2026-07-04 17:30:22, MOVE, v:1, k:ed@chaves, mode:DOWN
+2026-07-04 17:31:08, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-07-04 17:31:10, EXEC, v:1, k:ed@chaves, mode:FULL, rate:0, size:47
+2026-07-04 17:32:05, EXEC, v:1, k:ed@chaves, mode:FULL, rate:0
+2026-07-04 17:32:04, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-04 17:35:53, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-04 17:38:27, EXEC, v:1, k:ed@chaves, mode:FULL, size:51, fail:COMP
+2026-07-04 17:38:20, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-04 17:45:54, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-04 17:46:37, EXEC, v:1, k:ed@chaves, mode:FULL, size:59, fail:COMP
+2026-07-04 17:49:13, EXEC, v:1, k:ed@chaves, mode:FULL, size:66, fail:COMP
+2026-07-04 17:49:21, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-07-04 17:49:28, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-07-04 17:49:29, EXEC, v:1, k:ed@chaves, mode:FULL, size:65, fail:COMP
+2026-07-04 17:50:14, EXEC, v:1, k:ed@chaves, mode:FULL, size:65, fail:COMP
+2026-07-04 17:50:34, EXEC, v:1, k:ed@chaves, mode:FULL, rate:0, size:65
+2026-07-04 17:50:49, EXEC, v:1, k:ed@chaves, mode:FULL, rate:100, size:65
+2026-07-04 17:51:02, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-07-04 17:51:07, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-07-04 17:51:57, EXEC, v:1, k:ed@chaves, mode:FULL, rate:100
+2026-07-04 17:51:58, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-07-04 17:52:09, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-07-04 17:52:10, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-07-04 17:52:20, SELF, v:1, k:ed@chaves, self:1, rate:100, study:30
+2026-07-04 17:52:35, MOVE, v:1, k:ed@queimando, mode:DOWN
+2026-07-04 17:52:38, MOVE, v:1, k:ed@queimando, mode:PICK
+2026-07-04 17:52:50, MOVE, v:1, k:ed@queimando, mode:BACK

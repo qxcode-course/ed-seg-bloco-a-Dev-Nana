@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-17_07-09-35",
+            "content": "@@ -177,24 +177,13 @@\n &s)%0A\n+%0A\n     \n-fmt.Println(\n diag\n@@ -192,12 +192,11 @@\n al(s, 0)\n-)\n %0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-17_07-10-07",
+            "content": "@@ -99,38 +99,9 @@\n   %7D%0A\n-    fmt.Println(string(s%5B0%5D))\n %0A\n+\n     \n@@ -121,16 +121,17 @@\n %5D, k+1)%0A\n+%0A\n %7D%0A%0Afunc \n@@ -178,16 +178,27 @@\n s)%0A    f\n+mt.Println(\n diagonal\n@@ -203,11 +203,12 @@\n al(s, 0)\n+)\n %0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-17_07-11-24",
+            "content": "@@ -201,24 +201,25 @@\n can(&s)%0A    \n+f\n diagonal(s, \n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-06-17_07-11-30",
+            "content": "@@ -120,17 +120,17 @@\n tring(s%5B\n-1\n+0\n %5D))%0A    \n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-06-17_07-11-43",
+            "content": "@@ -120,17 +120,17 @@\n tring(s%5B\n-0\n+1\n %5D))%0A    \n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-06-17_07-11-49",
+            "content": "@@ -115,30 +115,8 @@\n tln(\n-strings.Repeat(%22 %22) + \n stri\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-06-17_07-12-25",
+            "content": "@@ -131,12 +131,10 @@\n at(%22\n+ \n %22\n-, k\n ) + \n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-06-17_07-12-42",
+            "content": "@@ -127,17 +127,16 @@\n Repeat(%22\n- \n %22, k) + \n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-06-17_07-12-44",
+            "content": "@@ -17,35 +17,13 @@\n ort \n-(%0A    %22fmt%22%0A    %22strings%22%0A)\n+%22fmt%22\n %0A%0Afu\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-06-17_07-13-34",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"strings\"\n)\n\nfunc diagonal(s string, k int) {\n    if len(s) == 0 {\n        return\n    }\n    fmt.Println(strings.Repeat(\" \", k) + string(s[0]))\n    diagonal(s[1:], k+1)\n}\n\nfunc main() {\n    var s string\n    fmt.Scan(&s)\n    diagonal(s, 0)\n}\n",
+            "lines": "19"
+        }
+    ]
+}

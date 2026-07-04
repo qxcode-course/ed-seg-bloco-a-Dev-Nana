@@ -1,0 +1,9 @@
+{"ts":1781691584,"hash":"db3b03f6fbe0dc132b6c32a2c7aa83378f95cb6a1a54ff9c1f1243dd3ad41413","mode":"full","content":"H4sIAM10MmoC/ytITM5OTE9VyE3MzOPKzC3ILypRUErLLVHiSivNSwYLa2gqVHMpAAFQWC+gKDOvJCdPQ8kjNScnX0chPL8oJ0VRSZOrlgsAdYpEcEsAAAA="}
+{"ts":1781691622,"hash":"07498fcc526f3fbe3e4d60179a294089e389cfa0f2a222e29719d7ee5b407d1b","mode":"diff","ops":[{"tag":"replace","a1":3,"a2":4,"text":"    \n"}]}
+{"ts":1781691757,"hash":"19358b793f937ab3b053d0f1ef00999228a1eb13eaba544ee5b3281731a83de2","mode":"diff","ops":[{"tag":"replace","a1":3,"a2":4,"text":"    var s string\n    fmt.\n"}]}
+{"ts":1781691788,"hash":"a3f43aa9a76086b9a75fce512369d1108921d34030cf6a8541ca1bd23cb89c29","mode":"diff","ops":[{"tag":"insert","a1":2,"a2":2,"text":"\nfunc sufixo(){\n    \n}\n\n"},{"tag":"replace","a1":4,"a2":5,"text":"    fmt.Scan(&s)\n\n    sufixo()\n"}]}
+{"ts":1781692607,"hash":"c06a72d7486f0e1821f122a053f525be272ae8d2c4c6d4100743d521f5713622","mode":"diff","ops":[{"tag":"replace","a1":4,"a2":5,"text":"    if len(s) == 0 {\n        return\n    }\n\n    sufixos(s[1])\n"}]}
+{"ts":1781692642,"hash":"24f26d69d4080573caa5fda0d8d65ae1ae05ccc7d3878a4962b6fd4aac2f9d03","mode":"diff","ops":[{"tag":"replace","a1":1,"a2":2,"text":"import (\n    \n)\"fmt\"\n"},{"tag":"replace","a1":8,"a2":9,"text":"    sufixos(s[1:])\n    fmt.Println(s)\n"},{"tag":"replace","a1":15,"a2":16,"text":"    sufixo(s)\n"}]}
+{"ts":1781692664,"hash":"c4fd5fb3b52c274c6e9b46b9e6523cde5fda24b9be8db61df4811964d2c58a63","mode":"diff","ops":[{"tag":"replace","a1":2,"a2":4,"text":"    \"fmt\"\n)\n"}]}
+{"ts":1781692687,"hash":"d7184a4fa29d31e6a935b94dbf6b7c7f5c38474a6a5cffce51c2f3ff9c412f72","mode":"diff","ops":[{"tag":"insert","a1":3,"a2":3,"text":"    \"string\"\n"}]}
+{"ts":1781692707,"hash":"85cef6f91ad839b9a37de61b1c7a355bd706bfc392a6ea201cfabbdea43084de","mode":"diff","ops":[{"tag":"delete","a1":3,"a2":4,"text":""},{"tag":"replace","a1":6,"a2":7,"text":"func sufixo(s string){\n"}]}

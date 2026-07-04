@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-17_07-43-15",
+            "content": "@@ -107,12 +107,8 @@\n n-1)\n- + 8\n %0A%7D%0A%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-17_07-44-05",
+            "content": "package main\nimport \"fmt\"\n\nfunc bloco(n int) int{\n    if n == 1{\n        return 20\n    }\n    return bloco(n-1) + 8\n}\n\nfunc main(){\n    var n int\n    fmt.Scan(&n)\n    fmt.Println(bloco(n))\n}\n",
+            "lines": "15"
+        }
+    ]
+}

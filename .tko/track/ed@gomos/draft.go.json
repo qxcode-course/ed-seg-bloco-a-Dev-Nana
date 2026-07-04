@@ -12,8 +12,23 @@
         },
         {
             "label": "2026-06-10_15-15-15",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    \n    var q int\n    var dir string\n\n    fmt.Scan(&q, &dir)\n\n    var x, y int\n    fmt.Scan(&x, &y)\n\n    switch dir{\n        case \"L\":\n            x--\n        case \"R\":\n            x++\n        case \"U\":\n            y--\n        case \"D\":\n            y++\n    }\n\n    fmt.Println(x, y)\n}\n",
+            "content": "@@ -23,43 +23,8 @@\n mt%22%0A\n-%0Atype Pos struct %7B%0A    x, y int%0A%7D%0A%0A\n func\n@@ -100,116 +100,8 @@\n r)%0A%0A\n-    snake := make(%5B%5DPos, q)%0A%0A    for i := 0; i %3C q; i++ %7B%0A        fmt.Scan(&snake%5Bi%5D.x, &snake%5Bi%5D.y)%0A    %7D%0A%0A\n     \n@@ -181,25 +181,16 @@\n         \n-snake%5B0%5D.\n x--%0A    \n@@ -215,25 +215,16 @@\n         \n-snake%5B0%5D.\n x++%0A    \n@@ -249,25 +249,16 @@\n         \n-snake%5B0%5D.\n y--%0A    \n@@ -287,17 +287,8 @@\n     \n-snake%5B0%5D.\n y++%0A\n@@ -303,79 +303,23 @@\n    f\n-or i := 0; i %3C q; i++%7B%0A        fmt.Println(snake%5Bi%5D.x, snake%5Bi%5D.y)%0A    %7D\n+mt.Println(x, y)\n %0A%7D%0A\n",
             "lines": "25"
+        },
+        {
+            "label": "2026-06-17_07-52-04",
+            "content": "@@ -243,79 +243,8 @@\n  %7D%0A%0A\n-    for i := q - 1; i %3E 0, i--%7B%0A        snake%5Bi%5D = snake%5Bi - 1%5D%0A    %7D%0A%0A\n     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-17_07-53-02",
+            "content": "@@ -264,17 +264,17 @@\n 1; i %3E 0\n-;\n+,\n  i--%7B%0A  \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-17_07-53-07",
+            "content": "package main\nimport \"fmt\"\n\ntype Pos struct {\n    x, y int\n}\n\nfunc main() {\n    \n    var q int\n    var dir string\n\n    fmt.Scan(&q, &dir)\n\n    snake := make([]Pos, q)\n\n    for i := 0; i < q; i++ {\n        fmt.Scan(&snake[i].x, &snake[i].y)\n    }\n\n    for i := q - 1; i > 0; i--{\n        snake[i] = snake[i - 1]\n    }\n\n    var x, y int\n    fmt.Scan(&x, &y)\n\n    switch dir{\n        case \"L\":\n            snake[0].x--\n        case \"R\":\n            snake[0].x++\n        case \"U\":\n            snake[0].y--\n        case \"D\":\n            snake[0].y++\n    }\n\n    for i := 0; i < q; i++{\n        fmt.Println(snake[i].x, snake[i].y)\n    }\n}\n",
+            "lines": "42"
         }
     ]
 }

@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-17_07-20-12",
+            "content": "@@ -23,168 +23,53 @@\n mt%22%0A\n-%0A\n func \n-sufixo()%7B%0A    if le\n+mai\n n(\n-s\n ) \n-== 0 %7B%0A        return%0A    %7D%0A%0A    sufixos(s%5B1:%5D)%0A    fmt.Println(s)%0A%7D%0A%0Afunc main() %7B%0A    var s string%0A    fmt.Scan(&s)%0A%0A    sufixo(\n+%7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-17_07-37-06",
+            "content": "@@ -179,13 +179,12 @@\n  sufixo(\n-s\n )%0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-17_07-37-10",
+            "content": "@@ -17,34 +17,13 @@\n ort \n-(%0A    %22fmt%22%0A    %22string%22%0A)\n+%22fmt%22\n %0A%0Afu\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-17_07-38-07",
+            "content": "@@ -25,16 +25,29 @@\n   %22fmt%22%0A\n+    %22string%22%0A\n )%0A%0Afunc \n@@ -53,24 +53,16 @@\n  sufixo(\n-s string\n )%7B%0A    i\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-17_07-38-28",
+            "content": "@@ -104,16 +104,17 @@\n   sufixo\n+s\n (s%5B1:%5D)%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-06-17_07-38-40",
+            "content": "package main\nimport (\n    \"fmt\"\n)\n\nfunc sufixo(s string){\n    if len(s) == 0 {\n        return\n    }\n\n    sufixo(s[1:])\n    fmt.Println(s)\n}\n\nfunc main() {\n    var s string\n    fmt.Scan(&s)\n\n    sufixo(s)\n}\n",
+            "lines": "20"
+        }
+    ]
+}

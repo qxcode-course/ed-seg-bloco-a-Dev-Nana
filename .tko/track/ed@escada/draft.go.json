@@ -2,8 +2,33 @@
     "patches": [
         {
             "label": "2026-06-10_16-54-15",
-            "content": "\npackage main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -1,8 +1,9 @@\n+%0A\n package \n@@ -7,17 +7,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -24,147 +24,53 @@\n mt%22%0A\n-%0Afunc escada(n int) int %7B%0A    if n == 1%7B%0A        return 1%0A    %7D%0A%7D%0A%0Afunc main() %7B%0A    var n int %0A    fmt.Scan($n)%0A%0A    fmt.Println(escada(n)\n+func main() %7B%0A    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
             "lines": "6"
+        },
+        {
+            "label": "2026-06-17_06-41-37",
+            "content": "@@ -88,19 +88,8 @@\n   %7D%0A\n-    return%0A\n %7D%0A%0Af\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-06-17_06-45-47",
+            "content": "@@ -98,34 +98,8 @@\n turn\n- escada(n-1) + escada(n-3)\n %0A%7D%0A%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-17_06-46-19",
+            "content": "@@ -170,9 +170,9 @@\n can(\n-&\n+$\n n)%0A%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-17_06-47-45",
+            "content": "@@ -88,88 +88,8 @@\n   %7D%0A\n-%0A    if n == 2 %7B%0A        return 1%0A    %7D%0A%0A    if n == 3%7B%0A        return 2%0A    %7D%0A%0A\n     \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-06-17_06-48-38",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc escada(n int) int {\n    if n == 1{\n        return 1\n    }\n\n    if n == 2 {\n        return 1\n    }\n\n    if n == 3{\n        return 2\n    }\n\n    return escada(n-1) + escada(n-3)\n}\n\nfunc main() {\n    var n int \n    fmt.Scan(&n)\n\n    fmt.Println(escada(n))\n}\n",
+            "lines": "26"
         }
     ]
 }

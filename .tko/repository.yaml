@@ -14,16 +14,18 @@ sources:
   quests: null
 expanded:
 - ed@backtrack
-- ed@bfs
-- ed@linear
 - ed@tree
 - ed@dfs
+- ed@linear
+- ed@bfs
 flags:
   inbox: all
   panel: graph
-  show_panel: 'false'
   task_graph_mode: executions
   show_time: 'true'
+audit:
+  enabled: true
+  interval_seconds: null
 lang: go
-selected: ed@fila_enc
-selected_index: 7
+selected: ed@queimando
+selected_index: 10
