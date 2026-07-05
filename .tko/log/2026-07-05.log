@@ -1,0 +1,10 @@
+2026-07-05 00:01:00, EXEC, v:1, k:ed@sudoku, mode:FULL, size:103, fail:COMP
+2026-07-05 00:01:34, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:100, size:103
+2026-07-05 00:01:43, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:100
+2026-07-05 00:01:52, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:80, size:103
+2026-07-05 00:01:55, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:100, size:103
+2026-07-05 00:01:58, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-07-05 00:02:04, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-07-05 00:03:14, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:100, size:103
+2026-07-05 00:03:15, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-07-05 00:03:52, SELF, v:1, k:ed@sudoku, self:1, rate:100, study:100, concept:1, refactor:1

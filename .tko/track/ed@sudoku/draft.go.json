@@ -1,0 +1,119 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-04_22-56-58",
+            "content": "@@ -10,298 +10,67 @@\n ain%0A\n-%0A\n import \n-(%0A    %22fmt%22%0A    %22bufio%22%0A    %22os%22%0A)%0A%0Afunc main() %7B%0A    scanner := bufio.NewScanner(os.Stin)%0A%0A    var n int%0A    scanner.Scan()%0A    fmt.Sscan(scanner.Text(), &n)%0A%0A    for i := 0; i %3C n; i++%7B%0A        scanner.Scan()%0A        matriz%5Bi%5D = make(%5B%5Drune, n)%0A    %7D%0A%0A    resolver(matriz, 0)%0A%0A    %0A%7D\n+%22fmt%22%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22)%0A%7D5\n %0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-04_23-10-08",
+            "content": "@@ -54,520 +54,8 @@\n %0A)%0A%0A\n-func existeLinha(matriz %5B%5D%5B%5Drune, lin int, valor rune) bool %7B%0A    for _, x := range matriz%5Blin%5D %7B%0A        if x == valor %7B%0A            return true%0A        %7D%0A    %7D%0A    return false%0A%7D%0A%0Afunc existeColuna(matriz %5B%5D%5B%5Drune, col int, valor rune) bool %7B%0A    for i := 0; i %3C len(matriz); i++ %7B%0A        if matriz%5Bi%5D%5Bcol%5D == valor %7B%0A            return true%0A        %7D%0A    %7D%0A    return false%0A%7D%0A%0Afunc existeQuadrante(matriz %5B%5D%5B%5Drune, lin, col int, valor rune) bool%7B%0A    tam := 3%0A    if lenmatriz == 4%7B%0A        tam = 2%0A    %7D%0A%7D%0A%0A\n func\n@@ -64,16 +64,16 @@\n ain() %7B%0A\n+\n     scan\n@@ -268,16 +268,40 @@\n %0A    %7D%0A%0A\n+    resolver(matriz, 0)%0A\n %0A    %0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-07-04_23-28-51",
+            "content": "@@ -562,279 +562,8 @@\n    %7D\n-%0A%0A    inicioLin := (lin / tam) * tam%0A    inicioCol := (col / tam) * tam%0A%0A    for i := 0; i %3C tam; i++(%0A        for j := 0; j %3C tam; j++%7B%0A            if matriz%5BinicioLin+i%5D%5BinicioCol+j%5D == valor %7B%0A                return true%0A            %7D%0A        %7D%0A    )%0A%0A    return false\n %0A%7D%0A%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-07-04_23-39-47",
+            "content": "@@ -837,193 +837,8 @@\n %0A%7D%0A%0A\n-func resolver(matriz %5B%5D%5B%5Drune, index int) bool %7B%0A    n := len(matriz)%0A%0A    if index == n*n %7B%0A        return true%0A    %7D%0A%0A    lin := index / n %0A    col := index %25 n %0A%0A    return false%0A%7D%0A%0A\n func\n@@ -1055,30 +1055,12 @@\n  %7D%0A%0A\n+%0A\n     \n-resolver(matriz, 0)\n %0A%7D%0A\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-07-04_23-43-38",
+            "content": "@@ -1146,41 +1146,8 @@\n n)%0A%0A\n-    matriz := make(%5B%5D%5B%5Drune, n)%0A%0A\n     \n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-07-04_23-44-56",
+            "content": "@@ -1250,29 +1250,22 @@\n %5D = \n+make(\n %5B%5Drune\n-(scanner.Text()\n+, n\n )%0A  \n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-07-04_23-46-13",
+            "content": "@@ -1304,79 +1304,6 @@\n  0)%0A\n-    for i := 0; i %3C n; i++%7B%0A        fmt.Printkn(string(matriz%5Bi%5D))%0A    %7D%0A\n %7D%0A\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-07-04_23-47-08",
+            "content": "@@ -524,24 +524,22 @@\n   if len\n-(\n matriz\n-)\n  == 4%7B%0A \n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-07-04_23-48-03",
+            "content": "@@ -657,25 +657,25 @@\n i %3C tam; i++\n-%7B\n+(\n %0A        for\n@@ -808,25 +808,25 @@\n       %7D%0A    \n-%7D\n+)\n %0A%0A    return\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-07-04_23-48-41",
+            "content": "@@ -947,32 +947,77 @@\n urn true%0A    %7D%0A%0A\n+    lin := index / n %0A    col := index %25 n %0A%0A\n     return false\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-07-04_23-49-16",
+            "content": "@@ -1302,17 +1302,17 @@\n mt.Print\n-l\n+k\n n(string\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-07-04_23-49-23",
+            "content": "@@ -1026,17 +1026,16 @@\n er(os.St\n-d\n in)%0A%0A   \n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-07-04_23-49-46",
+            "content": "@@ -959,223 +959,8 @@\n  %7D%0A%0A\n-    lin := index / n%0A%09col := index %25 n%0A%0A    if matriz%5Blin%5D%5Bcol%5D != '.' %7B%0A        return resolver(matriz, index+1)%0A    %7D%0A%0A    for num := '1'; num %3C= rune('0'+n); num++%7B%0A        %0A        matriz%5Blin%5D%5Bcol%5D = '.'%0A    %7D%0A%0A\n     \n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-07-04_23-52-40",
+            "content": "@@ -1135,262 +1135,8 @@\n     \n-if !existeLinha(matriz, lin, num) && !existeColuna(matriz, col, num) && !existeQuadrante(matriz, lin, col, num) %7B%0A            %0A            matriz%5Blin%5D%5Bcol%5D = num%0A%0A            if resolver(matriz, index)%7B%0A                return true%0A            %7D%0A        %7D\n %0A   \n",
+            "lines": "87"
+        },
+        {
+            "label": "2026-07-04_23-54-47",
+            "content": "@@ -1245,16 +1245,28 @@\n  num) %7B%0A\n+            \n %0A       \n@@ -1331,18 +1331,16 @@\n z, index\n-+1\n )%7B%0A     \n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-04_23-55-24",
+            "content": "@@ -1366,21 +1366,26 @@\n       %7D%0A\n-%0A\n+    \n     \n+%7D%0A\n         \n@@ -1407,35 +1407,26 @@\n %5D = '.'%0A    \n-    %7D%0A    \n %7D\n+%0A\n %0A    return \n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-04_23-56-04",
+            "content": "@@ -436,17 +436,23 @@\n %7D%0A%0Afunc \n-q\n+existeQ\n uadrante\n@@ -485,17 +485,26 @@\n  int\n-) %5B%5Drune \n+, valor rune) bool\n %7B%0A  \n@@ -637,33 +637,8 @@\n am%0A%0A\n-    valores := %5B%5Drune%7B%7D%0A%0A\n     \n@@ -713,238 +713,82 @@\n     \n-valores = append(valores, matriz%5Bl + i%5D%5Bc+j%5D)%0A        %7D%0A    %7D%0A%0A    return valores%0A%7D%0A%0Afunc existeQuadrante(matriz %5B%5D%5B%5Drune, lin, col int, valor rune) bool%7B%0A    for _, x := range quadrante(matriz, lin, col) %7B%0A        if x == valor %7B\n+if matriz%5BinicioLin+i%5D%5BinicioCol+j%5D == valor %7B%0A                return true\n %0A   \n@@ -792,35 +792,25 @@\n             \n-return true\n+%7D\n %0A        %7D%0A \n@@ -806,32 +806,33 @@\n         %7D%0A    %7D%0A\n+%0A\n     return false\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-05_00-01-00",
+            "content": "@@ -551,17 +551,25 @@\n  %7D%0A%0A    \n-l\n+inicioLin\n  := (lin\n@@ -586,17 +586,25 @@\n tam%0A    \n-c\n+inicioCol\n  := (col\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-05_00-01-34",
+            "content": "@@ -498,16 +498,63 @@\n tam := 3\n+%0A    if len(matriz) == 4%7B%0A        tam = 2%0A    %7D\n %0A%0A    l \n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-05_00-01-43",
+            "content": "@@ -501,56 +501,9 @@\n  := \n-0%0A    if len(matriz) == 4%7B%0A        tam = 2%0A    %7D\n+3\n %0A%0A  \n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-07-05_00-01-52",
+            "content": "@@ -501,9 +501,9 @@\n  := \n-3\n+0\n %0A   \n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-05_00-01-55",
+            "content": "@@ -1400,24 +1400,25 @@\n col, num) %7B%0A\n+%0A\n             \n@@ -1668,17 +1668,16 @@\n r n int%0A\n-%0A\n     scan\n@@ -1691,13 +1691,8 @@\n n()%0A\n-    %0A\n     \n@@ -1721,16 +1721,17 @@\n (), &n)%0A\n+%0A\n     matr\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-05_00-03-14",
+            "content": "package main\n\nimport (\n    \"fmt\"\n    \"bufio\"\n    \"os\"\n)\n\nfunc existeLinha(matriz [][]rune, lin int, valor rune) bool {\n    for _, x := range matriz[lin] {\n        if x == valor {\n            return true\n        }\n    }\n    return false\n}\n\nfunc existeColuna(matriz [][]rune, col int, valor rune) bool {\n    for i := 0; i < len(matriz); i++ {\n        if matriz[i][col] == valor {\n            return true\n        }\n    }\n    return false\n}\n\nfunc quadrante(matriz [][]rune, lin, col int) []rune {\n    tam := 3\n    if len(matriz) == 4{\n        tam = 2\n    }\n\n    l := (lin / tam) * tam\n    c := (col / tam) * tam\n\n    valores := []rune{}\n\n    for i := 0; i < tam; i++{\n        for j := 0; j < tam; j++{\n            valores = append(valores, matriz[l + i][c+j])\n        }\n    }\n\n    return valores\n}\n\nfunc existeQuadrante(matriz [][]rune, lin, col int, valor rune) bool{\n    for _, x := range quadrante(matriz, lin, col) {\n        if x == valor {\n            return true\n        }\n    }\n    return false\n}\n\nfunc resolver(matriz [][]rune, index int) bool {\n    n := len(matriz)\n\n    if index == n*n {\n        return true\n    }\n\n    lin := index / n\n\tcol := index % n\n\n    if matriz[lin][col] != '.' {\n        return resolver(matriz, index+1)\n    }\n\n    for num := '1'; num <= rune('0'+n); num++{\n        if !existeLinha(matriz, lin, num) && !existeColuna(matriz, col, num) && !existeQuadrante(matriz, lin, col, num) {\n            matriz[lin][col] = num\n\n            if resolver(matriz, index+1){\n                return true\n            }\n\n            matriz[lin][col] = '.'\n        }\n    }\n    return false\n}\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n\n    var n int\n\n    scanner.Scan()\n    \n    fmt.Sscan(scanner.Text(), &n)\n    matriz := make([][]rune, n)\n\n    for i := 0; i < n; i++{\n        scanner.Scan()\n        matriz[i] = []rune(scanner.Text())\n    }\n\n    resolver(matriz, 0)\n    for i := 0; i < n; i++{\n        fmt.Println(string(matriz[i]))\n    }\n}\n",
+            "lines": "103"
+        }
+    ]
+}
