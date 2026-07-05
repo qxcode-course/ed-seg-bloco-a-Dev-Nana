@@ -2,8 +2,178 @@
     "patches": [
         {
             "label": "2026-06-03_13-36-30",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -17,307 +17,59 @@\n ort \n-(%0A    %22fmt%22%0A    %22bufio%22%0A    %22os%22%0A)%0A%0Afunc valido(seq %5B%5Drune, pos int, valor rune, limite int) bool%7B%0A    %0A%7D%0A%0Afunc main() %7B%0A    scanner := bufio.NewScanner(os.Stdin)%0A%0A    scanner.Scan()%0A    seq := %5B%5Drune(scanner.Text())%0A%0A    var limite int%0A    scanner.Scan()%0A    fmt.Sscan(scanner.Text(), &limite)%0A%0A    \n+%22fmt%22%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-07-05_00-21-38",
+            "content": "@@ -120,163 +120,8 @@\n     \n-return true%0A%7D%0A%0Afunc resolver(seq %5B%5Drune, limite int) bool%7B%0A    if valido(seq, index, valor, limite) %7B%0A        seq%5Bindex%5D = valor%0A%0A        if resolver%0A    %7D\n %0A%7D%0A%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-07-05_12-38-54",
+            "content": "@@ -163,23 +163,16 @@\n , limite\n-, index\n  int) bo\n@@ -269,115 +269,14 @@\n lver\n-(seq, limite, index+1)%7B%0A            return true%0A        %7D%0A%0A        seq%5Bindex%5D = '.'%0A    %7D%0A%0A    return false\n+%0A    %7D\n %0A%7D%0A%0A\n@@ -464,20 +464,15 @@\n imite)%0A%0A\n-    %0A\n     %0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-07-05_12-49-06",
+            "content": "@@ -61,16 +61,59 @@\n  valido(\n+seq %5B%5Drune, pos int, valor rune, limite int\n ) bool%7B%0A\n@@ -273,16 +273,36 @@\n esolver(\n+seq, limite, index+1\n )%7B%0A     \n@@ -580,32 +580,8 @@\n     \n-resolver(seq, limite, 0)\n %0A   \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-07-05_12-52-23",
+            "content": "@@ -65,61 +65,16 @@\n ido(\n-seq %5B%5Drune, index int, valor rune, limite int\n ) bool%7B%0A\n     \n@@ -65,24 +65,24 @@\n ido() bool%7B%0A\n+\n     return t\n@@ -143,79 +143,8 @@\n ol%7B%0A\n-    if index == len(seq)%7B%0A        return true%0A    %7D%0A%0A    valor := '0'%0A%0A\n     \n@@ -210,16 +210,16 @@\n  valor%0A%0A\n+\n         \n@@ -234,28 +234,8 @@\n ver(\n-seq, limite, index-1\n )%7B%0A \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-07-05_12-56-41",
+            "content": "@@ -118,164 +118,8 @@\n ol%7B%0A\n-    for i := pos - limite; i %3C= pos+limite; i++ %7B%0A        if i %3C 0 %7C%7C i %3E= len(seq) %7C%7C i == pos %7B%0A            continue%0A        %7D%0A        return false%0A    %7D%0A\n     \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-07-05_13-24-52",
+            "content": "@@ -401,82 +401,20 @@\n     \n-fi seq%5Bindex%5D != '.' %7B%0A        return resolver(seq, limite, index+1)%0A    %7D\n+valor := '0'\n %0A%0A  \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-07-05_13-33-11",
+            "content": "@@ -477,26 +477,8 @@\n  %7D%0A%0A\n-    valor := '0'%0A%0A\n     \n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-07-05_13-33-59",
+            "content": "@@ -247,81 +247,8 @@\n   %7D%0A\n-        if seq%5Bi%5D == valor %7B%0A            return false%0A        %7D%0A        %0A\n     \n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-05_13-45-10",
+            "content": "@@ -299,32 +299,40 @@\n false%0A        %7D%0A\n+        \n %0A        return \n@@ -466,26 +466,26 @@\n %0A    %7D%0A%0A    \n-i\n f\n+i\n  seq%5Bindex%5D \n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-07-05_13-45-39",
+            "content": "@@ -538,17 +538,16 @@\n %0A    %7D%0A%0A\n-%0A\n     valo\n@@ -555,23 +555,11 @@\n  := \n-rune('0' + num)\n+'0'\n %0A%0A  \n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-07-05_13-46-04",
+            "content": "@@ -542,20 +542,8 @@\n  %7D%0A%0A\n-    num := 0\n %0A   \n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-07-05_13-46-17",
+            "content": "@@ -546,20 +546,16 @@\n     \n-for \n num := 0\n ; nu\n@@ -554,36 +554,9 @@\n := 0\n-; num %3C= limite; num++%7B%0A    \n+%0A\n     \n@@ -581,20 +581,16 @@\n + num)%0A%0A\n-    \n     if v\n@@ -621,16 +621,17 @@\n  limite)\n+ \n %7B%0A      \n@@ -636,32 +636,130 @@\n     \n-    seq%5Bindex%5D%0A        %7D\n+seq%5Bindex%5D = valor%0A%0A        if resolver(seq, limite, index-1)%7B%0A            return true%0A        %7D%0A%0A        seq%5Bindex%5D = '.'\n %0A   \n@@ -1009,35 +1009,6 @@\n    %0A\n-    fmt.Println(string(seq))%0A\n %7D%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-07-05_13-57-03",
+            "content": "@@ -561,16 +561,17 @@\n 0; num %3C\n+=\n  limite;\n@@ -684,143 +684,18 @@\n dex%5D\n- = valor%0A%0A            if resolver(seq, limite, index+1) %7B%0A                return true%0A            %7D%0A%0A        %7D%0A        seq%5Bindex%5D = '.'\n+%0A        %7D\n %0A   \n@@ -936,16 +936,20 @@\n ite, 0)%0A\n+    \n %0A    fmt\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-07-05_14-03-16",
+            "content": "@@ -302,24 +302,46 @@\n se%0A        %7D\n+%0A%0A        return false\n %0A    %7D%0A    r\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-07-05_14-03-39",
+            "content": "@@ -130,13 +130,8 @@\n i :=\n- pos;\n  pos\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-07-05_14-04-00",
+            "content": "@@ -881,16 +881,17 @@\n .Stdin)%0A\n+%0A\n     scan\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-07-05_14-05-42",
+            "content": "@@ -769,24 +769,49 @@\n %0A%0A        %7D%0A\n+        seq%5Bindex%5D = '.'%0A\n     %7D%0A%0A    r\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-07-05_14-06-02",
+            "content": "@@ -766,36 +766,8 @@\n   %7D%0A\n-            seq%5Bindex%5D = ' '\n %0A   \n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-05_14-06-22",
+            "content": "@@ -544,17 +544,16 @@\n 0; num %3C\n-=\n  limite;\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-05_14-08-22",
+            "content": "@@ -126,16 +126,21 @@\n for i :=\n+ pos;\n  pos - l\n@@ -544,16 +544,17 @@\n 0; num %3C\n+=\n  limite;\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-05_14-09-39",
+            "content": "@@ -76,17 +76,8 @@\n une,\n- pos int,\n  ind\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-05_14-13-28",
+            "content": "@@ -796,10 +796,9 @@\n  = '\n-..\n+ \n '%0A  \n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-05_14-13-58",
+            "content": "@@ -792,17 +792,18 @@\n dex%5D = '\n-,\n+..\n '%0A      \n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-05_14-14-04",
+            "content": "@@ -562,17 +562,16 @@\n e; num++\n- \n %7B%0A      \n@@ -619,32 +619,16 @@\n lido(seq\n- %5B%5Drune, pos int\n , index,\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-05_14-16-14",
+            "content": "@@ -366,25 +366,16 @@\n  %5B%5Drune,\n- pos int,\n  limite,\n@@ -620,16 +620,32 @@\n lido(seq\n+ %5B%5Drune, pos int\n , index,\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-05_14-16-49",
+            "content": "@@ -367,22 +367,42 @@\n %5B%5Drune, \n-limite\n+pos int, limite, index int\n ) bool%7B%0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-05_14-17-08",
+            "content": "@@ -366,28 +366,16 @@\n  %5B%5Drune,\n- valor rune,\n  limite)\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-05_14-17-55",
+            "content": "@@ -377,36 +377,32 @@\n lor rune, limite\n- int\n ) bool%7B%0A    if i\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-05_14-18-03",
+            "content": "@@ -362,24 +362,36 @@\n (seq %5B%5Drune,\n+ valor rune,\n  limite int)\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-05_14-18-09",
+            "content": "@@ -373,23 +373,16 @@\n , limite\n-, index\n  int) bo\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-05_14-18-50",
+            "content": "@@ -81,16 +81,27 @@\n pos int,\n+ index int,\n  valor r\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-05_14-19-27",
+            "content": "@@ -782,17 +782,17 @@\n dex%5D = '\n-.\n+,\n '%0A      \n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-05_14-19-55",
+            "content": "@@ -537,17 +537,16 @@\n 0; num %3C\n-=\n  limite;\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-05_14-20-09",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"bufio\"\n    \"os\"\n)\n\nfunc valido(seq []rune, pos int, valor rune, limite int) bool{\n    for i := pos - limite; i <= pos+limite; i++ {\n        if i < 0 || i >= len(seq) || i == pos {\n            continue\n        }\n        if seq[i] == valor {\n            return false\n        }\n    }\n    return true\n}\n\nfunc resolver(seq []rune, limite, index int) bool{\n    if index == len(seq){\n        return true\n    }\n\n    if seq[index] != '.' {\n        return resolver(seq, limite, index+1)\n    }\n\n    for num := 0; num <= limite; num++ {\n        valor := rune('0' + num)\n\n        if valido(seq, index, valor, limite){\n            seq[index] = valor\n\n            if resolver(seq, limite, index+1) {\n                return true\n            }\n            seq[index] = '.'\n        }\n    }\n\n    return false\n}\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n    scanner.Scan()\n    seq := []rune(scanner.Text())\n\n    var limite int\n    scanner.Scan()\n    fmt.Sscan(scanner.Text(), &limite)\n\n    resolver(seq, limite, 0)\n\n    fmt.Println(string(seq))\n}\n",
+            "lines": "57"
         }
     ]
 }

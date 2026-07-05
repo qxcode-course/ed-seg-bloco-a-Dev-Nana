@@ -1,0 +1,69 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_17-45-05",
+            "content": "@@ -219,100 +219,8 @@\n ) %7B%0A\n-%09if node == nil %7B%0A%09%09fmt.Println(%22#%22)%0A%09%09return%0A%09%7D%0A%0A%09if node.Left%0A%09MyShow(node.Left, nivel+1)%0A\n %09_, \n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-07-05_17-56-49",
+            "content": "@@ -282,99 +282,8 @@\n Left\n- == nil && node.Right == nil %7B%0A%09%09fmt.Println(%22...%22)%0A%09%09fmt.Println(node.Value)%0A%09%09return%0A%09%7D%0A%09\n %0A%09My\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-07-05_18-12-17",
+            "content": "@@ -237,65 +237,8 @@\n l %7B%0A\n-%09%09for i := 0; i %3C nivel; i++ %7B%0A%09%09%09fmt.Println(%22...%22)%0A%09%09%7D%0A\n %09%09fm\n@@ -244,32 +244,32 @@\n mt.Println(%22#%22)%0A\n+\n %09%09return%0A%09%7D%0A%0A%09if\n@@ -313,39 +313,8 @@\n l %7B%0A\n-%09%09for i := 0; i %3C nivel; i++%7B%0A%09\n %09%09fm\n@@ -330,20 +330,16 @@\n (%22...%22)%0A\n-%09%09%7D%0A\n %09%09fmt.Pr\n@@ -368,16 +368,17 @@\n turn%0A%09%7D%0A\n+%09\n %0A%09MyShow\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-07-05_18-17-49",
+            "content": "@@ -492,92 +492,8 @@\n l+1)\n-%0A%0A%09for i := 0; i %3C nivel; i++%7B%0A%09%09fmt.Println(%22...%22)%0A%09%7D%0A%0A%09MyShow(node.Right, nivel+1)\n %0A%09_,\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-07-05_18-18-53",
+            "content": "@@ -275,33 +275,32 @@\n fmt.Println(%22...\n-.\n %22)%0A%09%09%7D%0A%09%09fmt.Pri\n@@ -411,25 +411,24 @@\n Println(%22...\n-.\n %22)%0A%09%09%7D%0A%09%09fmt\n@@ -537,17 +537,16 @@\n tln(%22...\n-.\n %22)%0A%09%7D%0A%0A%09\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-07-05_18-19-07",
+            "content": "@@ -580,33 +580,8 @@\n +1)%0A\n-%09fmt.Println(node.value)%0A\n %09_, \n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-07-05_18-19-54",
+            "content": "@@ -590,25 +590,25 @@\n rintln(node.\n-V\n+v\n alue)%0A%09_, _ \n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-05_18-20-10",
+            "content": "@@ -551,34 +551,8 @@\n %09%7D%0A%0A\n-%09fmt.Println(node.Value)%0A%0A\n %09MyS\n@@ -576,16 +576,41 @@\n ivel+1)%0A\n+%09fmt.Println(node.Value)%0A\n %09_, _ = \n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-05_18-20-39",
+            "content": "@@ -602,16 +602,36 @@\n ivel+1)%0A\n+%09_, _ = node, nivel%0A\n %09// TODO\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-07-05_18-20-49",
+            "content": "@@ -276,16 +276,18 @@\n mt.Print\n+ln\n (%22....%22)\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-05_18-26-54",
+            "content": "@@ -399,32 +399,34 @@\n ++%7B%0A%09%09%09fmt.Print\n+ln\n (%22....%22)%0A%09%09%7D%0A%09%09f\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-05_18-27-12",
+            "content": "@@ -520,32 +520,34 @@\n i++%7B%0A%09%09fmt.Print\n+ln\n (%22....%22)%0A%09%7D%0A%0A%09fm\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-05_18-27-20",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\n// MyShow imprime a \u00e1rvore bin\u00e1ria de forma formatada.\nfunc MyShow(node *Node, nivel int) {\n\tif node == nil {\n\t\tfor i := 0; i < nivel; i++ {\n\t\t\tfmt.Print(\"....\")\n\t\t}\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\n\tif node.Left == nil && node.Right == nil {\n\t\tfor i := 0; i < nivel; i++{\n\t\t\tfmt.Print(\"....\")\n\t\t}\n\t\tfmt.Println(node.Value)\n\t\treturn\n\t}\n\n\tMyShow(node.Left, nivel+1)\n\n\tfor i := 0; i < nivel; i++{\n\t\tfmt.Print(\"....\")\n\t}\n\n\tfmt.Println(node.Value)\n\n\tMyShow(node.Right, nivel+1)\n\t// TODO\n}\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc create(parts *[]string) *Node {\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\tif elem == \"#\" {\n\t\treturn nil\n\t}\n\tvalue, _ := strconv.Atoi(elem)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\treturn node\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\troot := create(&parts)\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n\tMyShow(root, 0) // Chama a fun\u00e7\u00e3o de impress\u00e3o personalizada\n}\n",
+            "lines": "96"
+        }
+    ]
+}
