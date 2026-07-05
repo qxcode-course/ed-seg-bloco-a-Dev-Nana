@@ -13,19 +13,19 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@linear
-- ed@tree
-- ed@bfs
 - ed@backtrack
+- ed@tree
 - ed@dfs
+- ed@bfs
+- ed@linear
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   task_graph_mode: executions
   show_time: 'true'
 audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@balanceada
-selected_index: 12
+selected: ed@linear
+selected_index: 5

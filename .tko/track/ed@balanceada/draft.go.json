@@ -2,8 +2,73 @@
     "patches": [
         {
             "label": "2026-07-04_22-14-21",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    \n    \n}\n",
+            "content": "@@ -41,441 +41,12 @@\n     \n-scanner := bufio.NewScanner(os.Stdin)%0A%0A    scanner.Scan()%0A    expr := scanner.Text()%0A%0A    pilha := %5B%5Drune%7B%7D%0A%0A    for _, c := range expr %7B%0A        if c == '(' %7C%7C c == '%5B' %7B%0A            pilha = append(pilha, c)%0A        %7D else %7B%0A            if len(pilha) == 0 %7B%0A                fmt.Println%0A            %7D%0A        %7D%0A    %7D%0A%0A%0A    if len(pilha) == 0 %7B%0A        fmt.Println(%22balanceado%22)%0A    %7D else %7B%0A        fmt.Println(%22nao balanceado%22)%0A    %7D\n+%0A    \n %0A%7D%0A\n",
             "lines": "6"
+        },
+        {
+            "label": "2026-07-04_22-25-25",
+            "content": "@@ -279,37 +279,56 @@\n     \n-fmt.Println(%22nao balanceado%22)\n+if len(pilha) == 0 %7B%0A                fmt.Println\n %0A   \n@@ -340,14 +340,9 @@\n     \n-return\n+%7D\n %0A   \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-07-04_22-29-19",
+            "content": "@@ -17,42 +17,13 @@\n ort \n-(%0A    %22bufio%22%0A    %22fmt%22%0A    %22os%22%0A)\n+%22fmt%22\n %0Afun\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-07-04_22-35-09",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import (\n@@ -296,45 +296,8 @@\n e %7B%0A\n-            if len(pilha) == 0 %7B%0A    \n     \n@@ -334,19 +334,16 @@\n ceado%22)%0A\n-%0A  \n         \n@@ -338,34 +338,32 @@\n o%22)%0A            \n-  \n return%0A         \n@@ -365,185 +365,16 @@\n     \n-    %7D%0A%0A            if (c == ')' && topo != '(') %7C%7C (c == '%5D' && topo != '%5B') %7B%0A                fmt.Println(%22nao balanceado%22)%0A                return%0A            %7D%0A        \n %7D%0A    %7D\n+%0A\n %0A%0A  \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-04_22-41-54",
+            "content": "@@ -364,32 +364,33 @@\n ao balanceado%22)%0A\n+%0A\n                 \n@@ -415,35 +415,8 @@\n  %7D%0A%0A\n-            topo := pilha%0A%0A\n     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-07-04_22-42-34",
+            "content": "@@ -439,22 +439,8 @@\n ilha\n-%5Blen(pilha)-1%5D\n %0A%0A  \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-07-04_22-43-58",
+            "content": "@@ -453,49 +453,8 @@\n )-1%5D\n-%0A            pilha = pilha%5B:len(pilha)-0%5D\n %0A%0A  \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-07-04_22-45-36",
+            "content": "@@ -488,17 +488,17 @@\n (pilha)-\n-1\n+0\n %5D%0A%0A     \n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-04_22-45-40",
+            "content": "@@ -401,32 +401,33 @@\n n%0A            %7D%0A\n+%0A\n             topo\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-04_22-46-55",
+            "content": "@@ -38,16 +38,25 @@\n   %22fmt%22%0A\n+    %22os%22%0A\n )%0Afunc m\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-07-04_22-48-23",
+            "content": "@@ -42,17 +42,8 @@\n mt%22%0A\n-    %22os%22%0A\n )%0Afu\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-07-04_22-48-33",
+            "content": "@@ -376,23 +376,8 @@\n o%22)%0A\n-              %0A\n     \n@@ -413,21 +413,8 @@\n   %7D%0A\n-            %0A\n     \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-07-04_22-50-46",
+            "content": "@@ -205,17 +205,16 @@\n  expr %7B%0A\n-%0A\n         \n@@ -364,32 +364,47 @@\n ao balanceado%22)%0A\n+              %0A\n                 \n@@ -716,17 +716,16 @@\n  == 0 %7B%0A\n-%0A\n         \n@@ -750,25 +750,16 @@\n ceado%22)%0A\n-        %0A\n     %7D el\n@@ -763,25 +763,16 @@\n  else %7B%0A\n-        %0A\n         \n@@ -801,17 +801,16 @@\n ceado%22)%0A\n-%0A\n     %7D%0A%7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-07-04_22-54-13",
+            "content": "package main\n\nimport (\n    \"bufio\"\n    \"fmt\"\n    \"os\"\n)\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n\n    scanner.Scan()\n    expr := scanner.Text()\n\n    pilha := []rune{}\n\n    for _, c := range expr {\n\n        if c == '(' || c == '[' {\n            pilha = append(pilha, c)\n        } else {\n            if len(pilha) == 0 {\n                fmt.Println(\"nao balanceado\")\n                return\n            }\n            \n            topo := pilha[len(pilha)-1]\n            pilha = pilha[:len(pilha)-1]\n\n            if (c == ')' && topo != '(') || (c == ']' && topo != '[') {\n                fmt.Println(\"nao balanceado\")\n                return\n            }\n        }\n    }\n\n    if len(pilha) == 0 {\n\n        fmt.Println(\"balanceado\")\n        \n    } else {\n        \n        fmt.Println(\"nao balanceado\")\n\n    }\n}\n",
+            "lines": "45"
         }
     ]
 }
