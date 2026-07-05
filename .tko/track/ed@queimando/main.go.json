@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-04_17-53-31",
+            "content": "@@ -45,43 +45,8 @@\n %0A)%0A%0A\n-type Pos struct %7B%0A%09l int%0A%09c int%0A%7D%0A%0A\n func\n@@ -114,31 +114,29 @@\n ()%0A%09\n-stack.Push(Pos%7Bl, c%7D)%0A%0A\n+_ , _ , _ = mat, l, c\n %0A%0A%09/\n@@ -556,17 +556,16 @@\n .Text()%0A\n-%0A\n %09var nl,\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-07-04_18-04-46",
+            "content": "@@ -172,66 +172,8 @@\n %7D)%0A%0A\n-%09for !stack.IsEmpty()%7B%0A%09%09pos := stack.Pop()%0A%09%09_ = pos%0A%09%7D%0A%0A\n %0A%0A%09/\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-07-04_18-43-34",
+            "content": "@@ -230,98 +230,8 @@\n %09%7D%0A%0A\n-%09if pos.l %3C 0 %7C%7C pos.l %3E= len(grid) %7C%7C pos.c %3C 0 %7C%7C pos.c %3E= len(grid%5B0%5D) %7B%0A%09%09continue%0A%09%7D%0A\n %0A%0A%09/\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-04_18-44-39",
+            "content": "@@ -321,82 +321,8 @@\n %09%7D%0A%0A\n-%09if grid%5Bpos.l%5D%5Bpos.c%5D != '#' %7B%0A%09%09continue%0A%09%7D%0A%0A%09grid%5Bpos.l%5D%5Bpos.c%5D = 'o'%0A%0A\n %0A%09//\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-04_18-58-40",
+            "content": "@@ -223,16 +223,19 @@\n  = pos%0A%09\n+%7D%0A%0A\n %09if pos.\n@@ -300,25 +300,24 @@\n rid%5B0%5D) %7B%0A%09%09\n-%09\n continue%0A%09%09%7D\n@@ -313,23 +313,20 @@\n ontinue%0A\n-%09\n %09%7D%0A\n-%09%0A%09\n+%0A\n %09if grid\n@@ -351,17 +351,16 @@\n '#' %7B%0A%09%09\n-%09\n continue\n@@ -364,15 +364,12 @@\n nue%0A\n-%09\n %09%7D%0A\n-%09%0A%09\n+%0A\n %09gri\n@@ -390,20 +390,16 @@\n %5D = 'o'%0A\n-%09%7D%0A%0A\n %0A%0A%09// Es\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-07-04_18-59-06",
+            "content": "@@ -398,153 +398,8 @@\n  'o'\n-%0A%0A%09%09stack.Push(Pos%7Bpos.l - 1, pos.c%7D)%0A%09%09stack.Push(Pos%7Bpos.l + 1, pos.c%7D)%0A%09%09stack.Push(Pos%7Bpos.l, pos.c - 1%7D)%0A%09%09stack.Push(Pos%7Bpos.l, pos.c + 1%7D)\n %0A%09%7D%0A\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-07-04_19-04-38",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl int\n\tc int\n}\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\tstack := NewStack[Pos]()\n\tstack.Push(Pos{l, c})\n\n\tfor !stack.IsEmpty(){\n\t\tpos := stack.Pop()\n\t\t_ = pos\n\t\tif pos.l < 0 || pos.l >= len(grid) || pos.c < 0 || pos.c >= len(grid[0]) {\n\t\t\tcontinue\n\t\t}\n\t\n\t\tif grid[pos.l][pos.c] != '#' {\n\t\t\tcontinue\n\t\t}\n\t\n\t\tgrid[pos.l][pos.c] = 'o'\n\n\t\tstack.Push(Pos{pos.l - 1, pos.c})\n\t\tstack.Push(Pos{pos.l + 1, pos.c})\n\t\tstack.Push(Pos{pos.l, pos.c - 1})\n\t\tstack.Push(Pos{pos.l, pos.c + 1})\n\t}\n\n\n\n\t// Essa fun\u00e7\u00e3o deve usar uma list como pilha\n\t// e marcar as \u00e1rvores na matriz como queimados\n\t// Uma sugest\u00e3o de como fazer isso \u00e9:\n\t// - adicionar a primeira posi\u00e7\u00e3o na pilha\n\t// - enquanto a pilha n\u00e3o estiver vazia:\n\t//   - retirar o elemento do topo\n\t//   - se puder ser queimado, queime e adicione seus vizinhos \u00e0 pilha\n\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(mat [][]rune) {\n\tfor _, linha := range mat {\n\t\tfmt.Println(string(linha))\n\t}\n}\n",
+            "lines": "71"
+        }
+    ]
+}

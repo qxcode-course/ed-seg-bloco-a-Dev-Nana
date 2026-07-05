@@ -1,0 +1,284 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-04_19-47-58",
+            "content": "@@ -479,17 +479,18 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%09\n %0A\n-\n %09caminho\n@@ -540,31 +540,8 @@\n ()%0A%0A\n-%09caminho.Push(inicio)%0A%0A\n %09for\n@@ -562,16 +562,16 @@\n pty() %7B%0A\n+\n %09%09atual \n@@ -590,82 +590,8 @@\n op()\n-%0A%0A%09%09if grid%5Batual.l%5D%5Batual.c%5D == ' ' %7B%0A%09%09%09grid%5Batual.l%5D%5Batual.c%5D = '.'%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-07-04_19-51-23",
+            "content": "@@ -687,536 +687,11 @@\n %09%09%7D%0A\n-%0A%09%09if atual == fim %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09achou := false%0A%0A%09%09dl := %5B%5Dint%7B-1, 1, 0, 0%7D%0A%09%09dc := %5B%5Dint%7B0, 0, -1, 1%7D%0A%0A%09%09for i := 0; i %3C 4; i++%7B%0A%09%09%09nl := atual.l + dl%5Bi%5D%0A%09%09%09nc := atual.c + dc%5Bi%5D%0A%0A%09%09%09if nl %3C 0 %7C%7C nl %3E= len(grid) %7C%7C nc %3C 0 %7C%7C nc %3E= len(grid%5B0%5D) %7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A%0A%09%09%09if grid%5Bnl%5D%5Bnc%5D == ' ' %7C%7C grid%5Bnl%5D%5Bnc%5D == 'F' %7B%0A%09%09%09%09caminho.Push(Pos%7Bnl, nc%7D)%0A%09%09%09%09achou = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09%0A%09for !becos.IsEmpty() %7B%0A%09%09pos := becos.Pop()%0A%09%09grid%5Bpos.l%5D%5Bpos.c%5D = ' '%0A%09%7D%0A%0A%09for _, linha := range grid %7B%0A%09%09fmt.Println(string(linha))%0A\n %09%7D\n+%0A%0A\n %0A%7D%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-04_20-02-46",
+            "content": "@@ -1073,88 +1073,8 @@\n %0A%09%09%7D\n-%0A%0A%09%09if !achou %7B%0A%09%09%09if grid%5Batual.l%5D%5Batual.c%5D == '.' %7B%0A%09%09%09%09grid%5Batual.l%5D%0A%09%09%09%7D%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "85"
+        },
+        {
+            "label": "2026-07-04_20-04-12",
+            "content": "@@ -1144,47 +1144,13 @@\n l.l%5D\n-%5Batual.c%5D == 'X'%0A%09%09%09%7D%0A%0A%09%09%09caminho.Pop()\n+%0A%09%09%09%7D\n %0A%09%09%7D\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-07-04_20-04-44",
+            "content": "@@ -462,30 +462,24 @@\n %09%09%09fim = Pos\n-%7Bi, j%7D\n %0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-07-04_20-08-39",
+            "content": "@@ -1190,29 +1190,8 @@\n p()%0A\n-%09%09%09becos.Push(atual)%0A\n %09%09%7D%0A\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-07-04_20-09-49",
+            "content": "@@ -1157,16 +1157,17 @@\n ual.c%5D =\n+=\n  'X'%0A%09%09%09\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-04_20-10-08",
+            "content": "@@ -1159,17 +1159,17 @@\n l.c%5D = '\n-x\n+X\n '%0A%09%09%09%7D%0A%0A\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-04_20-10-33",
+            "content": "@@ -682,16 +682,17 @@\n l.c%5D = '\n+.\n '%0A%09%09%7D%0A%0A%09\n@@ -1124,16 +1124,17 @@\n .c%5D == '\n+.\n ' %7B%0A%09%09%09%09\n@@ -1163,33 +1163,11 @@\n  = '\n-X\n+x\n '%0A\n-%09%09%09%09becos.Push(atual)%0A\n %09%09%09%7D\n@@ -1185,16 +1185,37 @@\n o.Pop()%0A\n+%09%09%09becos.Push(atual)%0A\n %09%09%7D%0A%09%7D%0A%09\n@@ -1260,16 +1260,16 @@\n s.Pop()%0A\n-\n %09%09grid%5Bp\n@@ -1284,16 +1284,17 @@\n s.c%5D = '\n+ \n '%0A%09%7D%0A%0A%09f\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-04_20-13-19",
+            "content": "@@ -1191,16 +1191,29 @@\n %09%09%7D%0A%0A%09%09%09\n+caminho.Pop()\n %0A%09%09%7D%0A%09%7D%0A\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-04_20-16-24",
+            "content": "@@ -1270,17 +1270,16 @@\n s.c%5D = '\n- \n '%0A%09%7D%0A%0A%09f\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-04_20-17-25",
+            "content": "@@ -1123,17 +1123,16 @@\n .c%5D == '\n-.\n ' %7B%0A%09%09%09%09\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-04_20-17-48",
+            "content": "@@ -682,17 +682,16 @@\n l.c%5D = '\n- \n '%0A%09%09%7D%0A%0A%09\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-04_20-18-05",
+            "content": "@@ -682,17 +682,17 @@\n l.c%5D = '\n-.\n+ \n '%0A%09%09%7D%0A%0A%09\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-04_20-18-24",
+            "content": "@@ -1188,31 +1188,14 @@\n al)%0A\n-%0A\n %09%09%09\n-%09caminho.Pop()%0A%09%09%09%7D\n+%7D%0A%0A\n %09%09%09%0A\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-04_20-27-20",
+            "content": "@@ -207,16 +207,19 @@\n nl, &nc)\n+%0A%0A%09\n %0A%09grid :\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-04_20-43-46",
+            "content": "@@ -1186,17 +1186,8 @@\n l)%0A%0A\n-%09%09%09%09%7D%09%09%09%0A\n %09%09%09%09\n@@ -1200,16 +1200,24 @@\n o.Pop()%0A\n+%09%09%09%7D%09%09%09%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-07-04_20-44-11",
+            "content": "@@ -1185,16 +1185,18 @@\n al)%0A\n+%0A%09\n %09%09%09%7D%09%09%09%0A\n %09%09%09c\n@@ -1191,16 +1191,17 @@\n %09%09%09%7D%09%09%09%0A\n+%09\n %09%09%09camin\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-07-04_20-44-39",
+            "content": "@@ -1190,19 +1190,16 @@\n %09%09%7D%09%09%09%0A%09\n-%09%7D%0A\n %09%09caminh\n@@ -1206,16 +1206,20 @@\n o.Pop()%0A\n+%09%09%7D%0A\n %09%7D%0A%09%0A%09fo\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-07-04_20-45-32",
+            "content": "@@ -1190,16 +1190,19 @@\n %09%09%7D%09%09%09%0A%09\n+%09%7D%0A\n %09%09caminh\n@@ -1209,20 +1209,16 @@\n o.Pop()%0A\n-%09%09%7D%0A\n %09%7D%0A%09%0A%09fo\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-07-04_20-45-45",
+            "content": "@@ -395,9 +395,9 @@\n == '\n-#\n+I\n ' %7B%0A\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-07-04_20-46-20",
+            "content": "@@ -441,25 +441,25 @@\n d%5Bi%5D%5Bj%5D == '\n-.\n+F\n ' %7B%0A%09%09%09%09fim \n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-07-04_20-47-15",
+            "content": "@@ -391,17 +391,17 @@\n %5Bj%5D == '\n-I\n+#\n ' %7B%0A%09%09%09%09\n@@ -441,25 +441,25 @@\n d%5Bi%5D%5Bj%5D == '\n-F\n+.\n ' %7B%0A%09%09%09%09fim \n@@ -1156,17 +1156,17 @@\n l.c%5D = '\n-x\n+X\n '%0A%09%09%09%09be\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-07-04_20-47-29",
+            "content": "@@ -525,25 +525,22 @@\n  := \n-make(map\n+NewStack\n %5BPos%5D\n-bool\n+(\n )%0A%0A%09\n@@ -563,30 +563,8 @@\n cio)\n-%0A%09becos%5Binicio%5D = true\n %0A%0A%09f\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-07-04_20-56-08",
+            "content": "@@ -638,16 +638,90 @@\n .Top()%0A%0A\n+%09%09if grid%5Batual.l%5D%5Batual.c%5D == ' ' %7B%0A%09%09%09grid%5Batual.l%5D%5Batual.c%5D = '.'%0A%09%09%7D%0A%0A\n %09%09if atu\n@@ -732,16 +732,16 @@\n = fim %7B%0A\n-\n %09%09%09break\n@@ -763,16 +763,17 @@\n = false%0A\n+%0A\n %09%09dl := \n@@ -818,18 +818,16 @@\n  -1, 1%7D%0A\n-%09%09\n %0A%09%09for i\n@@ -1218,19 +1218,8 @@\n %09%09%09%0A\n-%09%09%7D else %7B%0A\n %09%09%09c\n",
+            "lines": "92"
+        },
+        {
+            "label": "2026-07-04_20-58-00",
+            "content": "@@ -487,104 +487,8 @@\n %09%7D%0A%0A\n-%09visitado := make(%5B%5D%5B%5Dbool, nl)%0A%09for i := range visitado %7B%0A%09%09visitado%5Bi%5D = make(%5B%5Dbool, nc)%0A%09%7D%0A%0A\n %09cam\n@@ -521,30 +521,33 @@\n ecos := \n-NewStack\n+make(map\n %5BPos%5D\n-(\n+bool\n )%0A%0A%09cami\n@@ -567,60 +567,29 @@\n io)%0A\n-%0A%09dl := %5B%5Dint%7B-1, 1, 0, 0%7D%0A%09dc := %5B%5Dint%7B0, 0, -1, 1%7D\n+%09becos%5Binicio%5D = true\n %0A%0A%09f\n@@ -640,44 +640,8 @@\n op()\n-%0A%09%09visitado%5Batual.l%5D%5Batual.c%5D = true\n %0A%0A%09%09\n@@ -691,16 +691,67 @@\n false%0A%09%09\n+dl := %5B%5Dint%7B-1, 1, 0, 0%7D%0A%09%09dc := %5B%5Dint%7B0, 0, -1, 1%7D\n %0A%09%09%0A%09%09fo\n@@ -1047,81 +1047,75 @@\n %0A%09%09%09\n-p := caminho.Pop()%0A%09%09%09if grid%5Bp.l%5D%5Bp\n+if grid%5Batual.l%5D%5Batual\n .c%5D \n-!= 'I' && grid%5Bp.l%5D%5Bp\n+== '.' %7B%0A%09%09%09%09grid%5Batual.l%5D%5Batual\n .c%5D \n-!\n = '\n-F' %7B\n+x'\n %0A%09%09%09\n@@ -1130,15 +1130,50 @@\n ush(\n-p\n+atual\n )%0A%09%09%09%7D\n+%09%09%09%0A%09%09%7D else %7B%0A%09%09%09caminho.Pop()\n %0A%09%09%7D\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-07-04_21-07-48",
+            "content": "@@ -1259,141 +1259,8 @@\n %7D%0A%09%7D\n-%0A%0A%09for !caminho.IsEmpty () %7B%0A%09%09p := caminho.Pop()%0A%09%09if grid%5Bp.l%5D%5Bp.c%5D != 'I' && grid%5Bp.l%5D%5Bp.c%5D != 'F'%7B%0A%09%09%09grid%5Bp.l%5D%5Bp.c%5D = '.'%0A%09%09%7D%0A%09%7D\n %0A%09%0A%09\n@@ -1285,16 +1285,18 @@\n () %7B%0A%09%09p\n+os\n  := beco\n@@ -1309,62 +1309,32 @@\n )%0A%09%09\n-if \n grid%5Bp\n+os\n .l%5D%5Bp\n+os\n .c%5D =\n-=\n  '\n-x' %7B%0A%09%09%09grid%5Bp.l%5D%5Bp.c%5D = ' '%0A%09%09%7D\n+ '\n %0A%09%7D%0A\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-07-04_21-13-07",
+            "content": "@@ -1026,29 +1026,8 @@\n %09%09if\n- !visitado%5Bnl%5D%5Bnc%5D &&\n  gri\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-07-04_21-15-27",
+            "content": "@@ -1405,24 +1405,129 @@\n = '.'%0A%09%09%7D%0A%09%7D\n+%0A%09%0A%09for !becos.IsEmpty() %7B%0A%09%09p := becos.Pop()%0A%09%09if grid%5Bp.l%5D%5Bp.c%5D == 'x' %7B%0A%09%09%09grid%5Bp.l%5D%5Bp.c%5D = ' '%0A%09%09%7D%0A%09%7D\n %0A%0A%09for _, li\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-07-04_21-17-51",
+            "content": "@@ -1044,17 +1044,16 @@\n %5Bnc%5D && \n-(\n grid%5Bnl%5D\n@@ -1087,17 +1087,16 @@\n  == 'F' \n-)\n %7B%0A%09%09%09%09ca\n@@ -1255,128 +1255,30 @@\n %09%09%09%09\n-grid%5Bp.l%5D%5Bp.c%5D = 'x'%0A%09%09%09%09becos.Push(p)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09%0A%09for !becos.IsEmpty() %7B %0A%09%09p := becos.Pop()%0A%09%09grid%5Bp.l%5D%5Bp.c%5D = ' ' \n+becos.Push(p)%0A%09%09%09%7D%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-07-04_21-23-37",
+            "content": "@@ -61,18 +61,22 @@\n uct %7B%0A%09l\n-,\n  \n+int%0A%09\n c int%0A%7D%0A\n@@ -127,16 +127,32 @@\n s.Stdin)\n+%0A%09scanner.Scan()\n %0A%0A%09var n\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-04_21-26-19",
+            "content": "@@ -86,18 +86,23 @@\n ain()%7B%0A%09\n-in\n+scanner\n  := bufi\n@@ -150,25 +150,37 @@\n fmt.\n-F\n+S\n scanf(\n-in\n+scanner.Text()\n , %22%25d %25d\n %5Cn%22,\n@@ -179,10 +179,8 @@\n d %25d\n-%5Cn\n %22, &\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-07-04_21-27-20",
+            "content": "@@ -259,129 +259,22 @@\n %7B%0A%09%09\n-linha, _ := in.ReadString('%5Cn')%0A%09%09if len(linha) %3E 0 && linha%5Blen(linha)-1%5D == '%5Cn' %7B%0A%09%09%09linha = linha%5B:len(linha)-1%5D%0A%09%09%7D%0A\n+scanner.Scan()\n %0A%09%09g\n@@ -289,21 +289,30 @@\n  %5B%5Drune(\n-linha\n+scanner.Text()\n )%0A%09%09%0A%09%09f\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-07-04_21-29-37",
+            "content": "@@ -911,24 +911,27 @@\n := false%0A%09%09%0A\n+%09%09%0A\n %09%09for i := 0\n@@ -1242,42 +1242,129 @@\n %0A%09%09%09\n-becos.Push(atual)%0A%09%09%09caminho.Pop()\n+p := caminho.Pop()%0A%09%09%09if grid%5Bp.l%5D%5Bp.c%5D != 'I' && grid%5Bp.l%5D%5Bp.c%5D != 'F' %7B%0A%09%09%09%09grid%5Bp.l%5D%5Bp.c%5D = 'x'%0A%09%09%09%09becos.Push(p)%0A%09%09%09%7D\n %0A%09%09%7D\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-04_21-31-22",
+            "content": "@@ -1306,16 +1306,21 @@\n () %7B %0A%09%09\n+p := \n becos.Po\n@@ -1323,16 +1323,40 @@\n s.Pop()%0A\n+%09%09grid%5Bp.l%5D%5Bp.c%5D = ' ' %0A\n %09%7D%0A%0A%09for\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-07-04_21-31-35",
+            "content": "@@ -1280,16 +1280,57 @@\n %7D%0A%09%7D%0A%09%0A%09\n+for !becos.IsEmpty() %7B %0A%09%09becos.Pop()%0A%09%7D%0A\n %0A%09for !c\n@@ -1457,52 +1457,8 @@\n %7D%0A%09%7D\n-%0A%09%0A%09for !becos.IsEmpty() %7B %0A%09%09becos.Pop()%0A%09%7D\n %0A%0A%09f\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-07-04_21-31-52",
+            "content": "@@ -101,20 +101,21 @@\n ufio.New\n-Read\n+Scann\n er(os.St\n@@ -1409,24 +1409,25 @@\n  '.'%0A%09%09%7D%0A%09%7D%0A\n+%09\n %0A%09for !becos\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-07-04_21-33-10",
+            "content": "@@ -742,17 +742,17 @@\n , 1, 0, \n-1\n+0\n %7D%0A%09dc :=\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-07-04_21-34-41",
+            "content": "@@ -758,17 +758,17 @@\n = %5B%5Dint%7B\n-1\n+0\n , 0, -1,\n@@ -768,17 +768,17 @@\n  0, -1, \n-0\n+1\n %7D%0A%0A%09for \n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-07-04_21-35-00",
+            "content": "@@ -732,20 +732,20 @@\n = %5B%5Dint%7B\n-0\n+-1\n , \n--\n 1, 0, 1%7D\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-07-04_21-35-14",
+            "content": "@@ -1231,16 +1231,37 @@\n achou %7B%0A\n+%09%09%09becos.Push(atual)%0A\n %09%09%09camin\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-07-04_21-35-30",
+            "content": "@@ -86,23 +86,18 @@\n ain()%7B%0A%09\n-scanner\n+in\n  := bufi\n@@ -105,13 +105,12 @@\n .New\n-Scann\n+Read\n er(o\n@@ -122,119 +122,50 @@\n in)%0A\n-%09scanner.Buffer(make(%5B%5Dbyte, 1024*1024), 1024*1024)%0A%0A%09var nl, nc int%0A%0A%09scanner.Scan()\n+%0A%09var nl, nc int\n %0A%09fmt.\n-S\n+F\n scan\n-(scanner.Text()\n+f(in, %22%25d %25d%5Cn%22\n , &n\n@@ -172,17 +172,16 @@\n l, &nc)%0A\n-%0A\n %09grid :=\n@@ -205,422 +205,95 @@\n l)%0A%09\n-visitado := make(%5B%5D%5B%5Dbool, nl)%0A%0A%09for i := range visitado %7B%0A%09%09visitado%5Bi%5D = make(%5B%5Dbool, nc)%0A%09%09grid%5Bi%5D = make(%5B%5Drune, nc)%0A%09%7D%0A%09%0A%09var inicio, fim Pos%0A%09%0A%09for i := 0; i %3C nl; i++ %7B%0A%09%09scanner.Scan()%0A%09%09linha := scanner.Text()%0A%0A%09%09for j := 0; j %3C nc && j %3C len(linha); j++%7B%0A%09%09%09grid%5Bi%5D%5Bj%5D = rune(linha%5Bj%5D)%0A%0A%09%09%09if grid%5Bi%5D%5Bj%5D == 'I' %7B%0A%09%09%09%09inicio = Pos%7Bi, j%7D%0A%09%09%09%7D else if grid%5Bi%5D%5Bj%5D == 'F' %7B%0A%09%09%09%09fim = Pos%7Bi, j%7D%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%09// \n+%0A%09var inicio, fim Pos%0A%09%0A%09for i := 0; i %3C nl; i++ %7B%0A%09%09linha, _ := in.ReadString('%5Cn')%0A%09%09\n if l\n@@ -341,19 +341,16 @@\n %5Cn' %7B%0A%09%09\n-// \n %09linha =\n@@ -377,19 +377,13 @@\n %5D%0A%09%09\n-// \n %7D%0A%0A%09%09\n-// \n grid\n@@ -407,19 +407,16 @@\n a)%0A%09%09%0A%09%09\n-// \n for j :=\n@@ -434,19 +434,16 @@\n  j++%7B%0A%09%09\n-// \n %09if grid\n@@ -460,19 +460,16 @@\n 'I' %7B%0A%09%09\n-// \n %09%09inicio\n@@ -483,27 +483,21 @@\n i, j%7D%0A%09%09\n-// \n %09%7D%0A%09%09\n-// \n %09if grid\n@@ -514,19 +514,16 @@\n 'F' %7B%0A%09%09\n-// \n %09%09fim = \n@@ -538,60 +538,20 @@\n %7D%0A%09%09\n-// \n %09%7D%0A%09%09\n-// \n %7D%0A%09%7D%0A%0A%09\n-%0A%09// pilha := NewStack%5BPos%5D()%0A%09// \n visi\n@@ -578,19 +578,16 @@\n l, nl)%0A%09\n-// \n for i :=\n@@ -605,19 +605,16 @@\n tado %7B%0A%09\n-// \n %09visitad\n@@ -642,57 +642,9 @@\n c)%0A%09\n-// %7D%0A%0A%09// parent := make(map%5BPos%5DPos)%0A%0A%09// stack.\n+%7D\n %0A%0A%09c\n@@ -736,16 +736,19 @@\n int%7B\n+0, \n -1, 0, 1\n , 0%7D\n@@ -743,19 +743,16 @@\n -1, 0, 1\n-, 0\n %7D%0A%09dc :=\n@@ -762,19 +762,16 @@\n int%7B\n-0, \n 1, 0, -1\n %7D%0A%0A%09\n@@ -766,16 +766,19 @@\n 1, 0, -1\n+, 0\n %7D%0A%0A%09for \n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-07-04_21-55-59",
+            "content": "@@ -1469,17 +1469,16 @@\n +%7B%0A%09%09%09nl\n-2\n  := atua\n@@ -1494,17 +1494,16 @@\n i%5D%0A%09%09%09nc\n-2\n  := atua\n@@ -1523,17 +1523,16 @@\n %09%09%09if nl\n-2\n  %3C 0 %7C%7C \n@@ -1537,22 +1537,27 @@\n %7C nl\n-2\n  %3E= \n-n\n l\n+en(grid)\n  %7C%7C nc\n-2\n  %3C 0\n@@ -1566,15 +1566,24 @@\n %7C nc\n-2\n  %3E= \n-nc\n+len(grid%5B0%5D)\n  %7B%0A%09\n@@ -1610,52 +1610,74 @@\n %09if \n+!visitado%5Bnl%5D%5Bnc%5D && (\n grid%5Bnl\n-2\n %5D%5Bnc\n-2\n %5D \n-!= '#' && !visitado\n+== ' ' %7C%7C grid\n %5Bnl\n-2\n %5D%5Bnc\n-2\n %5D\n+ == 'F' )\n %7B%0A%09%09\n@@ -1701,14 +1701,12 @@\n s%7Bnl\n-2\n , nc\n-2\n %7D)%0A%09\n@@ -1762,16 +1762,8 @@\n %0A%09%09%09\n-beco := \n cami\n@@ -1776,28 +1776,8 @@\n p()%0A\n-%09%09%09becos.Push(beco)%0A\n %09%09%7D%0A\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-07-04_21-58-25",
+            "content": "@@ -1828,16 +1828,70 @@\n o.Pop()%0A\n+%09%09if grid%5Bp.l%5D%5Bp.c%5D != 'I' && grid%5Bp.l%5D%5Bp.c%5D != 'F'%7B%0A%09\n %09%09grid%5Bp\n@@ -1905,16 +1905,20 @@\n %5D = '.'%0A\n+%09%09%7D%0A\n %09%7D%0A%0A%09for\n",
+            "lines": "127"
+        },
+        {
+            "label": "2026-07-04_21-58-52",
+            "content": "@@ -1855,16 +1855,59 @@\n '.'%0A%09%7D%0A%0A\n+%09for !becos.IsEmpty() %7B %0A%09%09becos.Pop()%0A%09%7D%0A%0A\n %09for _, \n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-07-04_21-59-03",
+            "content": "@@ -1855,10 +1855,72 @@\n '.'%0A%09%7D%0A%0A\n+%09for _, linha := range grid %7B%0A%09%09fmt.Println(string(linha))%0A%09%7D%0A\n %7D%0A\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-07-04_21-59-11",
+            "content": "@@ -685,18 +685,494 @@\n %09%09%7D%0A%09%09%7D%0A\n-%09%7D\n+%0A%09%09// if len(linha) %3E 0 && linha%5Blen(linha)-1%5D == '%5Cn' %7B%0A%09%09// %09linha = linha%5B:len(linha)-1%5D%0A%09%09// %7D%0A%0A%09%09// grid%5Bi%5D = %5B%5Drune(linha)%0A%09%09%0A%09%09// for j := 0; j %3C nc; j++%7B%0A%09%09// %09if grid%5Bi%5D%5Bj%5D == 'I' %7B%0A%09%09// %09%09inicio = Pos%7Bi, j%7D%0A%09%09// %09%7D%0A%09%09// %09if grid%5Bi%5D%5Bj%5D == 'F' %7B%0A%09%09// %09%09fim = Pos%7Bi, j%7D%0A%09%09// %09%7D%0A%09%09// %7D%0A%09%7D%0A%0A%09%0A%09// pilha := NewStack%5BPos%5D()%0A%09// visitado := make(%5B%5D%5B%5Dbool, nl)%0A%09// for i := range visitado %7B%0A%09// %09visitado%5Bi%5D = make(%5B%5Dbool, nc)%0A%09// %7D%0A%0A%09// parent := make(map%5BPos%5DPos)%0A%0A%09// stack.\n %0A%0A%09camin\n@@ -1753,113 +1753,8 @@\n p()%0A\n-%0A%09%09%09if grid%5Bbeco.l%5D%5Bbeco.c%5D != 'I' && grid%5Bbeco.l%5D%5Bbeco.c%5D != 'F' %7B%0A%09%09%09%09grid%5Bbeco.l%5D%5Bbeco.c%5D = 'x'%0A%09%09%09%7D%0A%0A\n %09%09%09b\n@@ -1859,68 +1859,6 @@\n %09%7D%0A%0A\n-%09for _, linha := range grid %7B%0A%09%09fmt.Println(string(linha))%0A%09%7D%0A\n %7D%0A\n",
+            "lines": "118"
+        },
+        {
+            "label": "2026-07-04_22-02-05",
+            "content": "@@ -1292,16 +1292,100 @@\n %5Bbeco.l%5D\n+%5Bbeco.c%5D != 'I' && grid%5Bbeco.l%5D%5Bbeco.c%5D != 'F' %7B%0A%09%09%09%09grid%5Bbeco.l%5D%5Bbeco.c%5D = 'x'%0A%09%09%09%7D\n %0A%0A%09%09%09bec\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-07-04_22-02-13",
+            "content": "@@ -1273,16 +1273,37 @@\n o.Pop()%0A\n+%0A%09%09%09if grid%5Bbeco.l%5D%0A%0A\n %09%09%09becos\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-07-04_22-02-23",
+            "content": "@@ -1277,113 +1277,8 @@\n p()%0A\n-%0A%09%09%09if grid%5Bbeco.l%5D%5Bbeco.c%5D != 'I' && grid%5Bbeco.l%5D%5Bbeco.c%5D != 'F' %7B%0A%09%09%09%09grid%5Bbeco.l%5D%5Bbeco.c%5D = 'x'%0A%09%09%09%7D%0A%0A\n %09%09%09b\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-07-04_22-02-44",
+            "content": "@@ -1273,16 +1273,121 @@\n o.Pop()%0A\n+%0A%09%09%09if grid%5Bbeco.l%5D%5Bbeco.c%5D != 'I' && grid%5Bbeco.l%5D%5Bbeco.c%5D != 'F' %7B%0A%09%09%09%09grid%5Bbeco.l%5D%5Bbeco.c%5D = 'x'%0A%09%09%09%7D%0A%0A\n %09%09%09becos\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-07-04_22-02-50",
+            "content": "@@ -1306,112 +1306,8 @@\n %7D%0A%09%0A\n-%09for !becos.IsEmpty() %7B%0A%09%09p := becos.Pop()%0A%09%09if grid%5Bp.l%5D%5Bp.c%5D == 'x' %7B%0A%09%09%09grid%5Bp.l%5D%5Bp.c%5D = ' '%0A    %7D%0A%7D%0A\n %09%0A%09f\n",
+            "lines": "95"
+        },
+        {
+            "label": "2026-07-04_22-03-23",
+            "content": "@@ -1277,113 +1277,8 @@\n p()%0A\n-%0A%09%09%09if grid%5Bbeco.l%5D%5Bbeco.c%5D != 'I' && grid%5Bbeco.l%5D%5Bbeco.c%5D != 'F' %7B%0A%09%09%09%09grid%5Bbeco.l%5D%5Bbeco.c%5D = 'x'%0A%09%09%09%7D%0A%0A\n %09%09%09b\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-04_22-03-49",
+            "content": "@@ -688,16 +688,17 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%0A\n %09caminho\n@@ -1503,23 +1503,25 @@\n %5D = ' '%0A\n-%09%09\n+    \n %7D%0A\n-%09\n %7D%0A\n+%09\n %0A%09for !c\n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-07-04_22-09-50",
+            "content": "@@ -176,16 +176,17 @@\n 4*1024)%0A\n+%0A\n %09var nl,\n@@ -369,17 +369,16 @@\n ol, nc)%0A\n-%0A\n %09%09grid%5Bi\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-07-04_22-10-43",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc main(){\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Buffer(make([]byte, 1024*1024), 1024*1024)\n\tvar nl, nc int\n\n\tscanner.Scan()\n\tfmt.Sscan(scanner.Text(), &nl, &nc)\n\n\tgrid := make([][]rune, nl)\n\tvisitado := make([][]bool, nl)\n\n\tfor i := range visitado {\n\t\tvisitado[i] = make([]bool, nc)\n\n\t\tgrid[i] = make([]rune, nc)\n\t}\n\t\n\tvar inicio, fim Pos\n\t\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tlinha := scanner.Text()\n\n\t\tfor j := 0; j < nc && j < len(linha); j++{\n\t\t\tgrid[i][j] = rune(linha[j])\n\n\t\t\tif grid[i][j] == 'I' {\n\t\t\t\tinicio = Pos{i, j}\n\t\t\t} else if grid[i][j] == 'F' {\n\t\t\t\tfim = Pos{i, j}\n\t\t\t}\n\t\t}\n\t}\n\tcaminho := NewStack[Pos]()\n\tbecos := NewStack[Pos]()\n\n\tcaminho.Push(inicio)\n\n\tdl := []int{-1, 0, 1, 0}\n\tdc := []int{0, 1, 0, -1}\n\n\tfor !caminho.IsEmpty() {\n\t\tatual := caminho.Top()\n\t\tvisitado[atual.l][atual.c] = true\n\n\t\tif atual == fim {\n\t\t\tbreak\n\t\t}\n\n\t\tachou := false\n\t\t\n\t\tfor i := 0; i < 4; i++{\n\t\t\tnl2 := atual.l + dl[i]\n\t\t\tnc2 := atual.c + dc[i]\n\n\t\t\tif nl2 < 0 || nl2 >= nl || nc2 < 0 || nc2 >= nc {\n\t\t\t\tcontinue\n\t\t\t}\n\n\t\t\tif grid[nl2][nc2] != '#' && !visitado[nl2][nc2]{\n\t\t\t\tcaminho.Push(Pos{nl2, nc2})\n\t\t\t\tachou = true\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\n\t\tif !achou {\n\t\t\tbeco := caminho.Pop()\n\n\t\t\tif grid[beco.l][beco.c] != 'I' && grid[beco.l][beco.c] != 'F' {\n\t\t\t\tgrid[beco.l][beco.c] = 'x'\n\t\t\t}\n\n\t\t\tbecos.Push(beco)\n\t\t}\n\t}\n\t\n\tfor !becos.IsEmpty() {\n\t\tp := becos.Pop()\n\t\tif grid[p.l][p.c] == 'x' {\n\t\t\tgrid[p.l][p.c] = ' '\n\t\t}\n\t}\n\n\tfor !caminho.IsEmpty () {\n\t\tp := caminho.Pop()\n\t\tgrid[p.l][p.c] = '.'\n\t}\n\n\tfor _, linha := range grid {\n\t\tfmt.Println(string(linha))\n\t}\n}\n",
+            "lines": "105"
+        }
+    ]
+}
