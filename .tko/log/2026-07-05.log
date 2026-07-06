@@ -224,3 +224,71 @@
 2026-07-05 18:27:20, EXEC, v:1, k:ed@formatada, mode:FULL, rate:100, size:96
 2026-07-05 18:27:23, MOVE, v:1, k:ed@formatada, mode:BACK
 2026-07-05 18:28:35, SELF, v:1, k:ed@formatada, self:1, rate:100, study:60, concept:1
+2026-07-05 18:31:48, MOVE, v:1, k:ed@inverter, mode:DOWN
+2026-07-05 18:31:48, MOVE, v:1, k:ed@inverter, mode:PICK
+2026-07-05 18:31:54, MOVE, v:1, k:ed@inverter, mode:BACK
+2026-07-05 18:32:02, MOVE, v:1, k:ed@inverter, mode:PICK
+2026-07-05 18:32:04, EXEC, v:1, k:ed@inverter, mode:FULL, rate:16, size:72
+2026-07-05 18:31:48, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-07-05 18:35:39, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-07-05 18:32:03, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-07-05 18:38:33, MOVE, v:1, k:ed@inverter, mode:BACK
+2026-07-05 18:38:42, MOVE, v:1, k:ed@inverter, mode:PICK
+2026-07-05 18:39:42, EXEC, v:1, k:ed@inverter, mode:FULL, rate:100, size:79
+2026-07-05 18:39:46, MOVE, v:1, k:ed@inverter, mode:BACK
+2026-07-05 18:39:49, MOVE, v:1, k:ed@inverter, mode:PICK
+2026-07-05 18:39:51, EXEC, v:1, k:ed@inverter, mode:FULL, rate:100
+2026-07-05 18:44:18, EXEC, v:1, k:ed@inverter, mode:FULL, rate:100
+2026-07-05 18:44:18, MOVE, v:1, k:ed@inverter, mode:BACK
+2026-07-05 18:45:08, SELF, v:1, k:ed@inverter, self:1, rate:100, study:15
+2026-07-05 18:46:21, MOVE, v:1, k:ed@clonar, mode:DOWN
+2026-07-05 18:46:22, MOVE, v:1, k:ed@clonar, mode:PICK
+2026-07-05 18:46:21, MOVE, v:1, k:ed@clonar, mode:EDIT
+2026-07-05 18:46:21, MOVE, v:1, k:ed@clonar, mode:EDIT
+2026-07-05 18:51:29, EXEC, v:1, k:ed@clonar, mode:FULL, size:78, fail:COMP
+2026-07-05 18:51:29, MOVE, v:1, k:ed@clonar, mode:BACK
+2026-07-05 22:25:05, MOVE, v:1, k:ed@clonar, mode:PICK
+2026-07-05 22:25:07, EXEC, v:1, k:ed@clonar, mode:FULL, fail:COMP
+2026-07-05 22:26:29, EXEC, v:1, k:ed@clonar, mode:FULL, rate:16, size:81
+2026-07-05 22:26:31, MOVE, v:1, k:ed@clonar, mode:BACK
+2026-07-05 22:26:36, MOVE, v:1, k:ed@clonar, mode:PICK
+2026-07-05 22:26:37, EXEC, v:1, k:ed@clonar, mode:FULL, rate:16
+2026-07-05 22:29:48, EXEC, v:1, k:ed@clonar, mode:FULL, size:83, fail:COMP
+2026-07-05 22:30:27, EXEC, v:1, k:ed@clonar, mode:FULL, rate:100, size:83
+2026-07-05 22:31:06, MOVE, v:1, k:ed@clonar, mode:BACK
+2026-07-05 22:31:12, MOVE, v:1, k:ed@clonar, mode:PICK
+2026-07-05 22:31:30, EXEC, v:1, k:ed@clonar, mode:FULL, rate:100
+2026-07-05 22:31:45, EXEC, v:1, k:ed@clonar, mode:FULL, rate:100
+2026-07-05 22:31:46, MOVE, v:1, k:ed@clonar, mode:BACK
+2026-07-05 22:32:01, SELF, v:1, k:ed@clonar, self:1, rate:100, study:14
+2026-07-05 22:32:04, MOVE, v:1, k:ed@soma, mode:DOWN
+2026-07-05 22:32:04, MOVE, v:1, k:ed@soma, mode:PICK
+2026-07-05 22:36:12, EXEC, v:1, k:ed@soma, mode:FULL, rate:0, size:83
+2026-07-05 22:32:04, MOVE, v:1, k:ed@soma, mode:EDIT
+2026-07-05 22:32:04, MOVE, v:1, k:ed@soma, mode:EDIT
+2026-07-05 22:36:11, MOVE, v:1, k:ed@soma, mode:EDIT
+2026-07-05 22:39:00, MOVE, v:1, k:ed@soma, mode:EDIT
+2026-07-05 22:45:02, EXEC, v:1, k:ed@soma, mode:FULL, size:85, fail:COMP
+2026-07-05 22:46:49, MOVE, v:1, k:ed@soma, mode:EDIT
+2026-07-05 22:47:15, EXEC, v:1, k:ed@soma, mode:FULL, rate:100, size:101
+2026-07-05 22:47:20, EXEC, v:1, k:ed@soma, mode:FULL, rate:100
+2026-07-05 22:47:21, MOVE, v:1, k:ed@soma, mode:BACK
+2026-07-05 22:47:32, MOVE, v:1, k:ed@soma, mode:PICK
+2026-07-05 22:48:56, EXEC, v:1, k:ed@soma, mode:FULL, rate:100
+2026-07-05 22:48:58, MOVE, v:1, k:ed@soma, mode:BACK
+2026-07-05 22:49:29, MOVE, v:1, k:ed@soma, mode:PICK
+2026-07-05 22:51:05, EXEC, v:1, k:ed@soma, mode:FULL, rate:100
+2026-07-05 22:51:06, MOVE, v:1, k:ed@soma, mode:BACK
+2026-07-05 22:51:29, SELF, v:1, k:ed@soma, self:1, rate:100, study:20
+2026-07-05 22:51:39, MOVE, v:1, k:ed@altura, mode:DOWN
+2026-07-05 22:51:39, MOVE, v:1, k:ed@altura, mode:PICK
+2026-07-05 22:51:39, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-07-05 22:51:39, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-07-05 22:58:43, EXEC, v:1, k:ed@altura, mode:FULL, rate:0, size:108
+2026-07-05 22:58:44, MOVE, v:1, k:ed@altura, mode:BACK
+2026-07-05 23:04:22, MOVE, v:1, k:ed@altura, mode:PICK
+2026-07-05 23:28:15, MOVE, v:1, k:ed@altura, mode:EDIT
+2026-07-05 23:32:43, MOVE, v:1, k:ed@altura, mode:BACK
+2026-07-05 23:53:32, MOVE, v:1, k:ed@altura, mode:PICK
+2026-07-05 23:53:33, EXEC, v:1, k:ed@altura, mode:FULL, size:113, fail:COMP
+2026-07-05 23:55:48, MOVE, v:1, k:ed@altura, mode:EDIT
