@@ -14,15 +14,15 @@ sources:
   quests: null
 expanded:
 - ed@bfs
-- ed@dfs
+- ed@tree
 flags:
   inbox: all
-  panel: logs
+  panel: skills
   task_graph_mode: executions
   show_time: 'true'
 audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@dfs
-selected_index: 8
+selected: ed@bst_serial
+selected_index: 17
