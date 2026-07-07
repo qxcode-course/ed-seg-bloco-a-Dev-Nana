@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-06_17-38-36",
+            "content": "@@ -206,92 +206,21 @@\n  %7B%0A%09\n-var dfs func(int, int)%0A%0A%09dfs = func(l, c int) %7B%0A%09%09grid%5Bl%5D%5Bc%5D = '0'%0A%09%7D%0A%0A%09ilhas := 0%0A%09\n+//%0A%09_ := grid\n %0A%09re\n@@ -228,13 +228,9 @@\n urn \n-ilhas\n+0\n %0A%7D%0A%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-07-06_22-15-01",
+            "content": "@@ -205,46 +205,8 @@\n t %7B%0A\n-%09if len(grid) == 0 %7B%0A%09%09return 0%0A%09%7D%0A%0A%0A%0A\n %09var\n@@ -256,70 +256,8 @@\n %7B%0A%09%09\n-if l %3C 0 %7C%7C l %3E= nl %7C%7C c %3C 0 %7C%7C c %3E= nc %7B%0A%09%09%09return%0A%09%09%7D%0A%0A%09%09if \n grid\n@@ -267,95 +267,13 @@\n %5Bc%5D \n-!\n = '\n-1' %7B%0A%09%09%09return%0A%09%09%7D%0A%0A%09%09dfs(l - 1, c)%0A%09%09dfs(l + 1, c)%0A%09%09dfs(l, c - 1)%0A%09%09dfs(l, c + 1)\n+0'\n %0A%09%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-07-06_22-20-23",
+            "content": "@@ -240,43 +240,8 @@\n %0A%09%7D%0A\n-%09%0A%09nl := len(grid)%0A%09nc := len(grid)\n %0A%0A%0A%09\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-06_22-20-46",
+            "content": "@@ -274,11 +274,8 @@\n grid\n-%5B0%5D\n )%0A%0A%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-07-06_22-20-52",
+            "content": "@@ -508,126 +508,8 @@\n := 0\n-%0A%0A%09for i := 0; i %3C nl; i++%7B%0A%09%09for j := 0; j %3C nc; j++%7B%0A%09%09%09if grid%5Bi%5D%5Bj%5D == '1' %7B%0A%09%09%09%09ilhas++%0A%09%09%09%09dfs(i, j)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n %0A%09%0A%09\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-07-06_22-24-14",
+            "content": "@@ -429,28 +429,8 @@\n %09%7D%0A%0A\n-%09%09grid%5Bl%5D%5Bc%5D = '0'%0A%0A\n %09%09df\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-07-06_22-31-02",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o numIslands\n// Ela \u00e9 a fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode para resolver o problema\nfunc numIslands(grid [][]byte) int {\n\tif len(grid) == 0 {\n\t\treturn 0\n\t}\n\t\n\tnl := len(grid)\n\tnc := len(grid[0])\n\n\n\tvar dfs func(int, int)\n\n\tdfs = func(l, c int) {\n\t\tif l < 0 || l >= nl || c < 0 || c >= nc {\n\t\t\treturn\n\t\t}\n\n\t\tif grid[l][c] != '1' {\n\t\t\treturn\n\t\t}\n\n\t\tgrid[l][c] = '0'\n\n\t\tdfs(l - 1, c)\n\t\tdfs(l + 1, c)\n\t\tdfs(l, c - 1)\n\t\tdfs(l, c + 1)\n\t}\n\n\tilhas := 0\n\n\tfor i := 0; i < nl; i++{\n\t\tfor j := 0; j < nc; j++{\n\t\t\tif grid[i][j] == '1' {\n\t\t\t\tilhas++\n\t\t\t\tdfs(i, j)\n\t\t\t}\n\t\t}\n\t}\n\t\n\treturn ilhas\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tgrid := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tgrid[i] = []byte(scanner.Text())\n\t}\n\tresult := numIslands(grid)\n\tfmt.Println(result)\n}\n",
+            "lines": "67"
+        }
+    ]
+}
