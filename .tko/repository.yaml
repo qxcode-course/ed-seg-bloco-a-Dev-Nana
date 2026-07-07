@@ -13,8 +13,8 @@ sources:
   writeable: false
   quests: null
 expanded:
+- ed@list
 - ed@bfs
-- ed@tree
 flags:
   inbox: all
   panel: skills
@@ -24,5 +24,5 @@ audit:
   enabled: true
   interval_seconds: null
 lang: go
-selected: ed@bst_serial
-selected_index: 17
+selected: ed@caminho
+selected_index: 19
